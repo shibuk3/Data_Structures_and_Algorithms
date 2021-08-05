@@ -4,7 +4,7 @@ You are given an integer array nums and an integer x. In one operation, you can 
 
 Return the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1
 
-
+BASED ON LONGEST SUBARRAY WITH K SUM
 Example 1:
 
 Input: nums = [1,1,4,2,3], x = 5
