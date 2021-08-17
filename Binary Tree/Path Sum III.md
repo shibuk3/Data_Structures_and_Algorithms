@@ -29,7 +29,7 @@ The number of nodes in the tree is in the range [0, 1000].
 -109 <= Node.val <= 109
 -1000 <= targetSum <= 1000
 
-
+__METHOD 1 : HASH MAP__
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -86,3 +86,10 @@ public:
 };
 
 ```
+__METHOD 2__: __DFS__
+
+'''cpp
+
+
+
+'''
