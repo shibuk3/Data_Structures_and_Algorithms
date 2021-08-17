@@ -11,4 +11,6 @@ Given a list of ascending three-digits integers representing a binary with the d
 smaller than 5. You need to return the sum of all paths from the root towards the leaves.
   
 ![image](https://user-images.githubusercontent.com/51910127/129801024-1137fc06-d34a-42ad-b4db-a0c38065e836.png)
+
+
 [want to Try this que, try here](https://www.lintcode.com/problem/1098/)
