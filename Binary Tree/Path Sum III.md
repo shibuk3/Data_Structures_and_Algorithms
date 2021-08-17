@@ -88,8 +88,38 @@ public:
 ```
 __METHOD 2__: __DFS__
 
-'''cpp
+```cpp
 
+    void dfs(TreeNode* root,int targetSum, int& a)
+{  
+    if(root==NULL)
+    {
+    return;
+    }
 
+    if(root->val==targetSum)
+    {a++;}
+    dfs(root->left, targetSum-root->val,a);
+    dfs(root->right, targetSum-root->val,a);
+    
+    return;
+}
 
-'''
+class Solution {
+public:
+    
+
+    int a=0;
+    int pathSum(TreeNode* root, int targetSum) {
+        
+        if(root==NULL) return 0;
+        dfs(root,targetSum,a);
+        
+        pathSum(root->left,targetSum);
+        pathSum(root->right,targetSum);
+        
+        return a;
+    }
+};
+
+```
