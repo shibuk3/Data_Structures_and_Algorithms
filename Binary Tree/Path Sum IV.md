@@ -9,7 +9,7 @@ The tens digit represents the position P of this node in the level it belongs to
 The units digit represents the value V of this node, 0 <= V <= 9.
 Given a list of ascending three-digits integers representing a binary with the depth
 smaller than 5. You need to return the sum of all paths from the root towards the leaves.
-
+  
 Example 1:
 Input: [113, 215, 221]
 Output: 12
