@@ -10,23 +10,5 @@ The units digit represents the value V of this node, 0 <= V <= 9.
 Given a list of ascending three-digits integers representing a binary with the depth
 smaller than 5. You need to return the sum of all paths from the root towards the leaves.
   
-Example 1:
-Input: [113, 215, 221]
-Output: 12
-Explanation: 
-The tree that the list represents is:
-    3
-   / \
-  5   1
-
-The path sum is (3 + 5) + (3 + 1) = 12.
-Example 2:
-Input: [113, 221]
-Output: 4
-Explanation: 
-The tree that the list represents is: 
-    3
-     \
-      1
-
-The path sum is (3 + 1) = 4.
+![image](https://user-images.githubusercontent.com/51910127/129801024-1137fc06-d34a-42ad-b4db-a0c38065e836.png)
+[want to Try this que, try here](https://www.lintcode.com/problem/1098/)
