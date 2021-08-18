@@ -34,3 +34,25 @@ Constraints:
 The number of nodes in the tree is in the range [0, 104].
 -1000 <= Node.val <= 1000
 The depth of the tree will not exceed 1000.
+### MY stupid ass find it hard, donot know why
+solution credit: leetcode discuss
+```cpp
+int len = 0; // global variable
+public int longestUnivaluePath(TreeNode root) {
+    if (root == null) return 0;
+    len = 0;
+    getLen(root, root.val);
+    return len;
+}
+
+private int getLen(TreeNode node, int val) {
+    if (node == null) return 0;
+    int left = getLen(node.left, node.val);
+    int right = getLen(node.right, node.val);
+    len = Math.max(len, left + right);
+    if (val == node.val)  return Math.max(left, right) + 1;
+    return 0;
+}
+
+
+```
