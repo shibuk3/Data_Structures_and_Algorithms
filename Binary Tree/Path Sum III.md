@@ -98,7 +98,9 @@ __METHOD 2__: __DFS__
     }
 
     if(root->val==targetSum)
-    {a++;}
+    {a++;/* do not put return here, guess why as, in the same path , later on, that sum can be again produced by 
+    
+    extending that path                           */}
     dfs(root->left, targetSum-root->val,a);
     dfs(root->right, targetSum-root->val,a);
     
