@@ -37,10 +37,8 @@ bool count(TreeNode * root, int & a )
             {a++; return true;}
          
         //Can you guess why i have not included
-        
-       count(root->left,a) and count(root->right,a)
-       
-       in the same above if() condition ??
+        //count(root->left,a) and count(root->right,a)
+       //in the same above if() condition ??
         
         
          
