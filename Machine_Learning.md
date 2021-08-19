@@ -22,4 +22,4 @@ If the validation error-rate remains much higher than the training data error ra
 
 Figure 1. Learning curves showing measured error for different regression models applied to a prediction problem. The top-most chart is for a simple model which uses very few features but is already reasonably accurate. Adding more features reduces error on both training and validation data (middle chart). But when complexity is increased again with yet more features (bottom chart), training error improves but validation error does not - a sign that the model Is now beginning to over-fit.
 
-[Source 1- Understanding the Bias-Variance Tradeoff](Understanding the Bias-Variance Tradeoff)
+[Source 1- Understanding the Bias-Variance Tradeoff](http://scott.fortmann-roe.com/docs/BiasVariance.html#fnref:1)
