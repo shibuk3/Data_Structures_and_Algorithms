@@ -1,6 +1,8 @@
 
 437. Path Sum III
 
+Tags- HASHMAP, BINARY TREE, RECURSION, BACKTRACKING
+
 Given the root of a binary tree and an integer targetSum, return the number of paths
 where the sum of the values along the path equals targetSum.
 
@@ -98,7 +100,9 @@ __METHOD 2__: __DFS__
     }
 
     if(root->val==targetSum)
-    {a++;/* do not put return here, guess why as, in the same path , later on, that sum can be again produced by 
+    {a++;/* do not put return here, guess why as, in the same path 
+    
+    , later on, that sum can be again produced by 
     
     extending that path                           */}
     dfs(root->left, targetSum-root->val,a);
