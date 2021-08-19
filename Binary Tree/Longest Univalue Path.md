@@ -1,7 +1,7 @@
 687. Longest Univalue Path
 Medium
 [problem link](https://leetcode.com/problems/longest-univalue-path/)
-Tags- HASHMAP, BINARY TREE, RECURSION, BACKTRACKING
+
 
 Given the root of a binary tree, return the length of the longest path, where each
 node in the path has the same value. This path may or may not pass through the root.
