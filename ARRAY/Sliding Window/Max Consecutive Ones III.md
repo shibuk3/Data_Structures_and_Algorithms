@@ -21,8 +21,8 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.  \
 
 __Constraints:__
 
-- 1 <= nums.length <= 105 \
-- nums[i] is either 0 or 1. \
+- 1 <= nums.length <= 105 
+- nums[i] is either 0 or 1. 
 - 0 <= k <= nums.length
 
 ```cpp
