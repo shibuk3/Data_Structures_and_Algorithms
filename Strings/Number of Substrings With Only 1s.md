@@ -1,0 +1,64 @@
+### __Number of Substrings With Only 1s__
+[Problem Link](https://leetcode.com/problems/number-of-substrings-with-only-1s/)
+
+
+Given a binary string s (a string consisting only of '0' and '1's).
+
+Return the number of substrings with all characters 1's.
+
+Since the answer may be too large, return it modulo 10^9 + 7.
+
+ 
+
+__Example 1:__
+
+Input: s = "0110111" \
+Output: 9 \
+Explanation: There are 9 substring in total with only 1's characters. \
+"1" -> 5 times. \
+"11" -> 3 times. \
+"111" -> 1 time. \
+__Example 2:__
+
+Input: s = "101" \
+Output: 2 \
+Explanation: Substring "1" is shown 2 times in s. \
+Example 3: \
+
+Input: s = "111111" \
+Output: 21 \
+Explanation: Each substring contains only 1's characters. \
+Example 4: \
+
+Input: s = "000" \
+Output: 0
+ 
+
+__Constraints:__
+
+- s[i] == '0' or s[i] == '1'
+- 1 <= s.length <= 10^5
+
+```cpp
+class Solution {
+public:
+    int numSub(string s) {
+         int end=0,  count=0,mod = 1e9 + 7;
+        char prev=s[end], cur=s[end];
+        int c=0;
+        while(end<s.length())
+        {
+            if(s[end]=='1')  count=count+1 ;
+            
+            else count=0;
+                
+            
+            c= (count+c)%mod;
+            end++;
+          } 
+
+        
+        return c;}
+};
+
+```
