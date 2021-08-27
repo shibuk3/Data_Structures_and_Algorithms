@@ -1,2 +1,5 @@
 - [find kth smallest elemnt in bst , withput traversing the whole tree , TC=O(h)](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
 - [find Sum of k smallest elements in BST,  TC=O(h)](https://www.geeksforgeeks.org/sum-k-smallest-elements-bst/)
+- [Inorder Tree Traversal without Recursion, using stack](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/)
+- [Inorder Tree Traversal without recursion and without stack!](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
+- [left view of binary tree without level order traversal](https://www.geeksforgeeks.org/print-left-view-binary-tree/)
