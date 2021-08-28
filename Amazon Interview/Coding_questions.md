@@ -3,4 +3,5 @@
 - [Inorder Tree Traversal without Recursion, using stack](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/)
 - [Inorder Tree Traversal without recursion and without stack!](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/)
 - [left view of binary tree without level order traversal](https://www.geeksforgeeks.org/print-left-view-binary-tree/)
-- [__Morris Order Traversal:__  Inorder and Preorder Traversal without recursion and stack]
+- [__Morris Order Traversal:__  Inorder and Preorder Traversal without recursion and stack](https://www.youtube.com/watch?v=wGXB9OWhPTg) \
+ -- [code link for morris traversal](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/MorrisTraversal.java)
