@@ -6,4 +6,4 @@
 - [__Morris Order Traversal:__  Inorder and Preorder Traversal without recursion and stack](https://www.youtube.com/watch?v=wGXB9OWhPTg) \
  -- [code link for morris traversal](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/MorrisTraversal.java)
 - [Rainwater trapping problem with and without using stack, TC=O(n), SC=O(1) ](https://www.geeksforgeeks.org/trapping-rain-water/)
---[video link](https://www.youtube.com/watch?v=FbGG2qpNp4U&list=PL_z_8CaSLPWdeOezg68SKkeLN4-T_jNHd&index=9)
+--[video link](https://www.youtube.com/watch?v=m18Hntz4go8)
