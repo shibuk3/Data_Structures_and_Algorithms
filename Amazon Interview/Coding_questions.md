@@ -7,6 +7,7 @@
  -- [code link for morris traversal](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/MorrisTraversal.java)
 - [Rainwater trapping problem with and without using stack, TC=O(n), SC=O(1) ](https://www.geeksforgeeks.org/trapping-rain-water/)
 --[video link](https://www.youtube.com/watch?v=m18Hntz4go8)
+- [Find Excel column name from a given column number](https://www.geeksforgeeks.org/find-excel-column-name-given-number/)
 
 ### __HARD___
 - [Given a number in words, print the number](https://www.geeksforgeeks.org/convert-number-to-words/)
