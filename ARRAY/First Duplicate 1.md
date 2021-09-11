@@ -3,8 +3,8 @@ Solution to the "First Duplicate" problem in C#.
 
 ## Problem
 
-Given an array that contains only numbers in the range 1 to array.Length, find the first duplicate number for
-which the second occurrence has the minimal index. If there is no such number, return -1.
+Given an array that contains only numbers in the range 1 to array.Length, find the __first duplicate number for
+which the second occurrence has the minimal index__. If there is no such number, return -1.
 
 **Note:** Write a solution with O(n) time complexity and O(1) additional space complexity.
 
