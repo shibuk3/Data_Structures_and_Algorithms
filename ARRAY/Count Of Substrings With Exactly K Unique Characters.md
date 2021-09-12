@@ -1,10 +1,12 @@
+
+```cpp
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {   
-    string s="bcbc";
+    string s="aabcbcdbca";
  // cin>>s;
   int k=2;
  // cin>>k;
@@ -17,10 +19,10 @@ int main()
   { 
     if(u[s[end]]==0){c++;u[s[end]]++;}
     
-    while(c==k){count++; end++;} 
+    while(c==k&&end+1<s.length()&&u[s[end+1]]!=0){count++;u[s[end]]++; end++;} 
     
     
-    while(c==k &&start<=end)   
+    while(c==k &&start<end)   
       {  count++;
          if(u[s[start]]==1) c--;
           u[s[start]]--;
@@ -35,3 +37,4 @@ int main()
     
     return 0;
 }
+```
