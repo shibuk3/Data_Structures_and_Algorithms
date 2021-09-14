@@ -54,20 +54,20 @@ int count(string s,int k )
 
 {
  int end=0, start=0;
-  int count=0;
+  
   unordered_map<char, int>u;int ans=0;
   int c=0;
   while(end<s.length())
   { 
     if(u[s[end]]==0){c++;}
     u[s[end]]++;
-    count++;
+    
     
      
     
     
     while(c>k &&start<=end)   
-      {  count--;
+      {  
  if(u[s[start]]==1) c--;                                                        
           u[s[start]]--;
           start++;
