@@ -6,3 +6,4 @@
 - [Longest Substring With At Most K Unique Characters](https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-substring-with-at-most-k-unique-characters-official/ojquestion)
 - [Count Of Substrings Having At Most K Unique Characters](https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-at-most-k-unique-characters-official/ojquestion)
 - [Count Of Substrings Having All Unique Characters](https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-all-unique-characters-official/ojquestion)
+- [Paint house 2](https://www.lintcode.com/en/old/problem/paint-house-ii/)
