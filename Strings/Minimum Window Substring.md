@@ -12,7 +12,7 @@ is no such substring, return the empty string "".
 
 Example 1:
 
-Input: s = "ADOBECODEBANC", t = "ABC"
+Input: s = "ADOBECODEBANC", t = "ABC" 
 Output: "BANC"
 Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
 Example 2:
@@ -26,6 +26,7 @@ Input: s = "a", t = "aa"
 Output: ""
 Explanation: Both 'a's from t must be included in the window.
 Since the largest window of s only has one 'a', return empty string.
+
 ```cpp
   
   string minWindow(string s, string t) {
