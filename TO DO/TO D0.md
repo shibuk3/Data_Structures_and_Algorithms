@@ -8,3 +8,26 @@
 - [Count Of Substrings Having All Unique Characters](https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-all-unique-characters-official/ojquestion)
 - [Paint house 2](https://www.lintcode.com/en/old/problem/paint-house-ii/)
 - [Shortest Subarray with Sum at Least K]()
+----------------
+sliding window based \
+- Count Number of Nice Subarrays
+- Replace the Substring for Balanced String
+- Max Consecutive Ones III
+- Binary Subarrays With Sum
+- Subarrays with K Different Integers
+- Fruit Into Baskets
+- Shortest Subarray with Sum at Least K
+- Minimum Size Subarray Sum
+all are present in lletcode
+---------------
+The following question can be solved by monotonic queue:
+
+- LC84. Largest Rectangle in Histogram
+- LC239. Sliding Window Maximum
+- LC739. Daily Temperatures
+- LC862. Shortest Subarray with Sum at Least K
+- LC901. Online Stock Span
+- LC907. Sum of Subarray Minimums
+
+
+-------
