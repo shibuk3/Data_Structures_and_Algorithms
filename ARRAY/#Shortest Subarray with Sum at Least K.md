@@ -44,7 +44,7 @@ public:
 ![image](https://user-images.githubusercontent.com/51910127/134566445-9ec64ae5-8de4-41b5-8e0e-2e9a005e8502.png)
 
 ### __Prefix+Dequeue Solution__
-```
+```py
 class Solution {
 public:
     int shortestSubarray(vector<int>& A, int K) {
