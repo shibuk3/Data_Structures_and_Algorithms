@@ -41,3 +41,9 @@ public:
     }
 };
 ```
+NEXT TO DO QUESTIONS-
+- Divide Chocolate
+- Capacity To Ship Packages In N Days
+- Koko Eating Bananas
+- Minimize Max Distance to Gas Station
+- Split Array Largest Sum
