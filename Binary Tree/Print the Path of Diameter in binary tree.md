@@ -1,5 +1,7 @@
 ### __Print the Path of Diameter in binary tree__
 
+- This is same as printing longest __leaf-to-leaf__ path in binary tree
+
 ```cpp
 // C++ program to print the longest leaf to leaf
 // path
