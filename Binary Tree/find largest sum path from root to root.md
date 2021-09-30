@@ -1,1 +1,1 @@
-### __find largest sum path from root to root__
+### __find largest sum path from leaf to leaf__
