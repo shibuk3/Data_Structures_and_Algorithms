@@ -15,4 +15,8 @@
 - [given a number, convert into words](https://www.geeksforgeeks.org/program-to-print-the-given-digit-in-words/)
 ### __DP__
 - [Assembly Line Scheduling](https://www.geeksforgeeks.org/assembly-line-scheduling-dp-34/)
+
+
+### __AMAZON LATEST OA__
+- https://leetcode.com/discuss/interview-question/1486822/AMAZON-OA-or-BangaloreIndia-or-SDE-2
  
