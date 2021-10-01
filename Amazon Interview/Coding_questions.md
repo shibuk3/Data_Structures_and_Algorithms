@@ -19,4 +19,26 @@
 
 ### __AMAZON LATEST OA__
 - https://leetcode.com/discuss/interview-question/1486822/AMAZON-OA-or-BangaloreIndia-or-SDE-2
+- https://leetcode.com/problems/coin-change-2/
+- ![image](https://user-images.githubusercontent.com/51910127/135668222-0390a21e-6c40-4dd8-9705-7a9d59ba2680.png)
+![image](https://user-images.githubusercontent.com/51910127/135668321-ea0777f4-fd0f-4c2e-91ab-591a8bae3854.png)
+![image](https://user-images.githubusercontent.com/51910127/135668359-c7f5a4e4-9634-488a-87da-71bc10529e56.png)
+
+```java
+public static long carParkingRoof(List<Long> cars, int k) {
+    // Write your code here
+        if (cars.size() == 0 || k < 0) {
+            return 0;
+        }
+
+        Collections.sort(cars);
+        long minDist = Long.MAX_VALUE;
+
+        for (int i = 0; i <= cars.size() - k; i++) {
+            minDist = Math.min(minDist, cars.get(i + k - 1) - cars.get(i));
+        }
+
+        return minDist + 1;
+    }
+```
  
