@@ -10,7 +10,8 @@ This repo contains about(in process)  200 most asked/ popular questions (ranging
 - Print Maximum Sum path in a binary tree between root to leaf node.
 - Find Height of binary tree.
 - Find Diameter of binary tree.
-- Print Diameter path of binary tree.
+- Print Diameter path of binary tree/Print the longest path in a binary tree from leaf to leaf.
+- Print the longest path in a binary tree from root to leaf.
 
  
 ### __Cluster 3: Monotonic Queue__
