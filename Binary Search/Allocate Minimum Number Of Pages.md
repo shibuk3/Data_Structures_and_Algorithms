@@ -12,7 +12,7 @@ THis condition should be followed:
 - A book(the page of a book) cannot be divided into two students.
 
 ```
-- [Explaination video]
+- [Explaination video](https://www.youtube.com/watch?v=2JSQIhPcHQg&t=2251s)
 
 
 ### __Similiar Questions__
