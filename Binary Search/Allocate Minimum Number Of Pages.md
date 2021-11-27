@@ -25,9 +25,11 @@ THis condition should be followed:
 - 1231 Divide Chocolate
 - 1011 Capacity To Ship Packages In N Days
 - 875 Koko Eating Bananas
-- Minimize 
-- 774 Max Distance to Gas Station
+- Painter's Partition problem
+- 774 MinimizeMax Distance to Gas Station
 - 410 Split Array Largest Sum
 - Topcoder SRM 169 "FairWorkload" problem.
 - Leetcode "Split Array Largest Sum"
+- Cutting Ribbons leetcode
+- Minimized Maximum of Products Distributed to Any Store
 
