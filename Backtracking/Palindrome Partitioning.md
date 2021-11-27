@@ -46,3 +46,7 @@ TC= (2^n)*n* k (n  = length of substring) You can also just write exponential.
 
 SC= And space complexbility will be n*k(where n is for vector insertion nd k is length of substring)
 ```
+#### __Related Question__
+- Palindrome Partitioning 2
+- Palindrome Partitioning 3
+- Palindrome Partitioning 4
