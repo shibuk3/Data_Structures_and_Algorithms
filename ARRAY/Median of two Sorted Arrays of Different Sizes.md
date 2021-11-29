@@ -83,7 +83,7 @@ int main()
 }
 ```
 
-### __Method 2: Optimal solution --> TC=O()__
+### __Method 2: Optimal solution --> TC=O(log(min(m,n))), SC=O(1)__
 ```java
 public class MedianOfTwoSortedArrayOfDifferentLength {
 
