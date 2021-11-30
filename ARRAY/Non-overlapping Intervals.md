@@ -32,3 +32,9 @@ Sorting Interval.end in ascending order is O(nlogn), then traverse intervals arr
         }
     }
 ```
+
+### __Similiar Questions__
+- LC56 Merge Intervals 
+- LC252 Meeting Rooms
+- LC253 Meeting Rooms II
+- LC452 Minimum Number of Arrows to Burst Balloons
