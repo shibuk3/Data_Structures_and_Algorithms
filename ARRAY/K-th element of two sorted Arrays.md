@@ -20,7 +20,7 @@
   
   so low=0, high=k
   
- Case 1: when N < K 
+ Case 2: when N < K 
  
  Array1=[1, 3, 4, 10]
  Array1=[2,5,6,8,9,11,34]
