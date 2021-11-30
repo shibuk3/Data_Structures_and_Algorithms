@@ -33,7 +33,7 @@ intervals[i].length == 2
 
 */
 // MY STUPID CODE MY SOLUTION 1
-
+```cpp
 bool comp(vector<int> a, vector<int> b)
 {   if(a[0] != b[0])
     return a[0] < b[0];
@@ -100,3 +100,4 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
         }
         return output;
     }
+```
