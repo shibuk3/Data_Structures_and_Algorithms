@@ -1,5 +1,10 @@
-[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+### __Non-overlapping Intervals__
+![image](https://user-images.githubusercontent.com/51910127/144117303-58e75266-272d-4072-9316-d55784585471.png)
 
+
+- [Question Link](https://leetcode.com/problems/non-overlapping-intervals/)
+
+- [Explaination link](https://www.geeksforgeeks.org/scheduling-in-greedy-algorithms/)
 
 Actually, the problem is the same as "Given a collection of intervals, find the maximum number of intervals that are non-overlapping." (the classic Greedy problem: Interval Scheduling). With the solution to that problem, guess how do we get the minimum number of intervals to remove? : )
 
