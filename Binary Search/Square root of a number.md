@@ -71,3 +71,4 @@ int main() {
 	return 0;
 }
 ``
+TC= root * log(10^(decimal places) * N )
