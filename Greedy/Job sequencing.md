@@ -30,3 +30,4 @@ profit sequence of jobs
         c, a, e
 
 ```
+Video Explaination Link : [Link](https://www.youtube.com/watch?v=LjPx4wQaRIs)
