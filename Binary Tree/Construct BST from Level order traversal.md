@@ -109,7 +109,7 @@ Time Complexity : O(n^2)
 This is because the above program is like we are inserting n
 nodes in a bst which takes O(n2) time in the worst case.
 ```
-### __2nd Method:   TC=O(NlogN)
+### __2nd Method:   TC=O(N)__
 
 ```md
 The idea is to make a struct element NodeDetails which contains
