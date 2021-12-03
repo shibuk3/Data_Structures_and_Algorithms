@@ -1,7 +1,9 @@
 ### __Majority Element : frequncy > floor of N/2__
 
-```md
+- [Practise link](https://leetcode.com/problems/majority-element/)
+- [Explaination video , Intution](https://www.youtube.com/watch?v=AoX3BPWNnoE)
 
+```md
 Given an array nums of size n, return the majority element.
 
 The majority element is the element that appears more than ⌊n / 2⌋ times.
