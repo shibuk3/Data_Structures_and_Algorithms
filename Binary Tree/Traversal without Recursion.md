@@ -176,3 +176,51 @@ Output:
 Time Complexity: O(N) 
 Auxiliary Space: O(H), where H is the height of the tree.
 ```
+### __Method 1: Iterative Postorder Traversal without recursion and using 2 stack__
+
+- [VIDEO Link](https://www.youtube.com/watch?v=2YBhNLodD8Q)
+
+```md
+iterative postorder traversal is discussed, which is more complex
+than the other two traversals (due to its nature of non-tail recursion,
+there is an extra statement after the final recursive call to itself)
+
+![image](https://user-images.githubusercontent.com/51910127/144710137-52f757cd-549c-4967-88ef-abcecc3402a6.png)
+
+```
+```cpp
+void postOrderIterative(Node* root)
+{
+    if (root == NULL)
+        return;
+ 
+    // Create two stacks
+    stack<Node *> s1, s2;
+ 
+    // push root to first stack
+    s1.push(root);
+    Node* node;
+ 
+    // Run while first stack is not empty
+    while (!s1.empty()) {
+        // Pop an item from s1 and push it to s2
+        node = s1.top();
+        s1.pop();
+        s2.push(node);
+ 
+        // Push left and right children
+        // of removed item to s1
+        if (node->left)
+            s1.push(node->left);
+        if (node->right)
+            s1.push(node->right);
+    }
+ 
+    // Print all elements of second stack
+    while (!s2.empty()) {
+        node = s2.top();
+        s2.pop();
+        cout << node->data << " ";
+    }
+}
+```
