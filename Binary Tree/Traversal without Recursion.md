@@ -231,3 +231,9 @@ TC= O(n)
 __SC= O(n)__
 
 ```
+### __2nd Method: Iterative Postorder Traversal using 1 Stack__
+
+- [Video Link](https://www.youtube.com/watch?v=NzIGLLwZBS8)
+
+```cpp
+```
