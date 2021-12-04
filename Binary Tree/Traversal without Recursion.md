@@ -184,10 +184,9 @@ Auxiliary Space: O(H), where H is the height of the tree.
 iterative postorder traversal is discussed, which is more complex
 than the other two traversals (due to its nature of non-tail recursion,
 there is an extra statement after the final recursive call to itself)
-
+```
 ![image](https://user-images.githubusercontent.com/51910127/144710137-52f757cd-549c-4967-88ef-abcecc3402a6.png)
 
-```
 ```cpp
 void postOrderIterative(Node* root)
 {
