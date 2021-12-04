@@ -223,3 +223,11 @@ void postOrderIterative(Node* root)
     }
 }
 ```
+```md
+Output: 
+
+4 5 2 6 7 3 1
+TC= O(n)
+SC= O(H)
+
+```
