@@ -1,4 +1,4 @@
-### __print the elements of both BSTs in sorted form__
+### __print the elements of both BSTs in sorted form(https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)__
 
 ```md
 Given two Binary Search Trees(BST), print the elements of both BSTs in sorted form.
@@ -35,7 +35,7 @@ Output: 0 1 2 3 5 8 10
 
 ```
 __Solution 1: Three pass solution , TC=O(m+n), SC=O(m+n)__
-```
+```cpp
 class Solution {
 public:
     vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
