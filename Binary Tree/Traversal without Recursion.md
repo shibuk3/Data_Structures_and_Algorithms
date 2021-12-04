@@ -81,3 +81,9 @@ int main()
     return 0;
 }
 ```
+```md
+Output: 
+
+ 4 2 5 1 3
+Time Complexity: O(n)
+```
