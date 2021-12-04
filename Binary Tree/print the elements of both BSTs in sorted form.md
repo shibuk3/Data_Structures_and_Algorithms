@@ -34,7 +34,39 @@ Second BST
 Output: 0 1 2 3 5 8 10 
 
 ```
+__Solution 1: Three pass solution , TC=O(m+n), SC=O(m+n)__
+```
+class Solution {
+public:
+    vector<int> getAllElements(TreeNode* root1, TreeNode* root2) {
+        vector<int> v1, v2, ret;
+        if (root1) dfs(root1, v1);
+        if (root2) dfs(root2, v2);
+        int pos1 = 0, pos2 = 0;
+        while (pos1 < v1.size() && pos2 < v2.size())
+        {
+            if (v1[pos1] < v2[pos2]) ret.push_back(v1[pos1++]);
+            else ret.push_back(v2[pos2++]);
+        }
+        while (pos1 < v1.size()) ret.push_back(v1[pos1++]);
+        while (pos2 < v2.size()) ret.push_back(v2[pos2++]);
+        return ret;
+    }
+    void dfs(TreeNode* root, vector<int>& v)
+    {
+        if (root->left) dfs(root->left, v);
+        v.push_back(root->val);
+        if (root->right) dfs(root->right, v);
+    }
+};
+```
+
+
+
+
+__Solution 2 : One pass solution, TC=O(m+n), SC=O(H)  , in worst case height of tree can be H=N__ 
 ```cpp
+
 class Solution {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         List<Integer> list = new ArrayList<>();
