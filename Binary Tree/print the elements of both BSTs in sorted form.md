@@ -34,3 +34,30 @@ Second BST
 Output: 0 1 2 3 5 8 10 
 
 ```
+```cpp
+class Solution {
+    public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> st1 = new Stack<>();
+        Stack<TreeNode> st2 = new Stack<>();
+        pushLeft(root1, st1);
+        pushLeft(root2, st2);
+        
+        while (!st1.isEmpty() || !st2.isEmpty()) {
+            Stack<TreeNode> st = st2.isEmpty() || !st1.isEmpty() && st1.peek().val < st2.peek().val ? st1 : st2;
+            TreeNode node = st.pop();
+            list.add(node.val);
+            pushLeft(node.right, st);
+        }
+        
+        return list;
+    }
+    
+    private void pushLeft(TreeNode node, Stack<TreeNode> st) {
+        while (node != null) {
+            st.push(node);
+            node = node.left;
+        }        
+    }
+}
+```
