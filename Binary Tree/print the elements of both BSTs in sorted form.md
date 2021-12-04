@@ -1,4 +1,4 @@
-### __Merge two BSTs with limited extra space__
+### __print the elements of both BSTs in sorted form__
 
 ```md
 Given two Binary Search Trees(BST), print the elements of both BSTs in sorted form.
