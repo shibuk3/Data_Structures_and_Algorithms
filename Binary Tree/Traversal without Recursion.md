@@ -89,7 +89,7 @@ Time Complexity: O(n)
 Space Complexity: O(H)
 H = Height of Binary Treea
 ```
-### __Iterative Preorder Traversal__
+### __Iterative Preorder Traversal without recursion__
 ```md
            10
           /   \
