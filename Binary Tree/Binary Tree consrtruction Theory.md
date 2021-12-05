@@ -2,6 +2,9 @@
 
 ## __Can we construct Binary Tree from inorder or preorder or postorder (1 traversal only)?__
 
+![image](https://user-images.githubusercontent.com/51910127/144760747-de815d13-1f5e-4a7a-a883-b5371ae05be2.png)
+
+
 ```md
 Yes, we can construct a Binary Tree from one traversal only (Inorder or Postorder or Preorder) but
 we cannot construct an unique Binary Tree from a single traversal (inorder or preorder or postorder).
