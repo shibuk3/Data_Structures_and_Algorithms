@@ -1,5 +1,6 @@
 ### __Largest BST Subtree, Solution 1: Brute Force TC=O(n^2), SC=O(1)__
 
+- Credits : [Striver](https://github.com/striver79/FreeKaTreeSeries/blob/main/largestBSTinBTCpp)
 - [Video explaination](https://www.youtube.com/watch?v=X0oXMdtUDwo&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=54)
 
 ```md
