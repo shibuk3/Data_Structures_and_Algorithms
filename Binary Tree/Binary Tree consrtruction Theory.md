@@ -15,7 +15,8 @@ The three traversal in summary:
 Inorder: left, root, right
 Preorder: root, left, right
 Postorder: left, right, root
-The problem is as follows:
+The problem is as follows
+
 
 Problem with Inorder
 With Inorder traversal, we know the leftmost and rightmost node in the Binary Tree but we do
@@ -24,10 +25,8 @@ Hence, any node (including the leftmost or the rightmost node) can be the root o
 
 If we consider the leftmost node as the root node, then we get a right skewed Binary Tree.
 If we consider the rightmost node as the root node, then we get a left skewed Binary Tree.
-
-
- 
 The problem exists from every subtree of the Binary Tree. We have no information about the root node.
+
 
 Problem with Preorder
 With Preorder traversal, we know the root of the Binary Tree for sure but we do not know
@@ -36,10 +35,8 @@ the leftmost or rightmost node of the Binary Tree.
 Consider the case when we can have no right sub-tree from the root. Then, the traversal will
 
 go into the leftsubtree directly and the last node will be in the left sub-tree and is not the rightmost node.
-
-
- 
 Therefore, we cannot create a unique Binary Tree using Preorder.
+
 
 Problem with Postorder
 With Postorder traversal, we know the root of the Binary Tree for sure but we do not
