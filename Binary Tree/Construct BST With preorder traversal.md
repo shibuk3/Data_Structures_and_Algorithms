@@ -1,5 +1,7 @@
 ### __Construct BST With preorder traversal__
 
+- [Leetcode Question Link](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)
+
 __Solution 1: Brute force TC=O(n^2), SC=O(n)__
 
 ```md
