@@ -79,3 +79,12 @@ Preorder + Postorder
 This gives you a good idea of whether it is possible to construct a Binary Tree from
 a given traversal like Inorder or Postorder or Preorder.
 ```
+### __What about Bst ? can we construct BST with only single traversal ??
+
+```md
+BST can be constructed with any traversal
+- inorder only
+- postorder only
+- preorder only
+- level order traversal only
+```
