@@ -123,8 +123,8 @@ TreeNode* helper( unordered_map<int , int>&u,vector<int>&in, vector<int>&po,int 
     
     //*ind=*ind+1;    
     TreeNode* temp= new TreeNode();
-    temp->val=po[*ind];(*ind)--;
-    if(*ind >inorder.size-1 ) return temp;
+    temp->val=po[*ind];(*ind)++;
+    if(*ind >in.size()-1 ) return temp;
     int y=u[temp->val];
     temp->left= helper(u, in, po,start, y-1 , ind);
     temp->right= helper(u, in, po,y+1, end , ind);
@@ -135,16 +135,17 @@ TreeNode* helper( unordered_map<int , int>&u,vector<int>&in, vector<int>&po,int 
     
 }
 
+
 class Solution {
 public:
-    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        unordered_map<int , int>u;
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+      unordered_map<int , int>u;
         
         for(int i=0;i<inorder.size();i++)
             u[inorder[i]]=i;
         
         int ind=0;
-       return helper(u, inorder,postorder,0, inorder.size()-1, &ind );
+       return helper(u, inorder,preorder,0, inorder.size()-1, &ind );   
     }
 };
 ```
