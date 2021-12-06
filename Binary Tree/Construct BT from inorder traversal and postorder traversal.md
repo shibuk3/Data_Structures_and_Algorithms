@@ -1,4 +1,4 @@
-### __Construct BT from inorder traversal and postorder traversal __
+### __Construct BT from inorder traversal and postorder traversal__
 - [Leetcode question](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
 ### __Solution 1: TC=O(n^2)__
@@ -111,3 +111,36 @@ int main()
 }
 ```
 ### __SOlution 2: Hashmap based TC=O(n), SC=O(n)__
+
+```cpp
+TreeNode* helper( unordered_map<int , int>&u,vector<int>&in, vector<int>&po,int start, int end, int* ind )
+{
+    if(end<start) return NULL;
+   // int static x=in.size()-1;
+    
+    //*ind=*ind+1;    
+    TreeNode* temp= new TreeNode();
+    temp->val=po[*ind];(*ind)--;
+    if(*ind <0 ) return temp;
+    int y=u[temp->val];
+    temp->right= helper(u, in, po,y+1, end , ind);
+    temp->left= helper(u, in, po,start, y-1 , ind);
+    
+    return temp;
+  
+}
+
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        unordered_map<int , int>u;
+        
+        for(int i=0;i<inorder.size();i++)
+            u[inorder[i]]=i;
+        
+        int ind=inorder.size()-1;
+       return helper(u, inorder,postorder,0, inorder.size()-1, &ind );
+    }
+};
+```
+
