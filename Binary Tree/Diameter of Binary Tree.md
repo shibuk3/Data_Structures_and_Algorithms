@@ -8,7 +8,7 @@
 
 
 - 1st Solution : TC= O(n^2)
-```
+```cpp
 int height(struct node* node);
  
 // Function to get diameter of a binary tree
@@ -53,7 +53,7 @@ int height(struct node* node)
 
 - 2nd Solution: TC=O(n)
 
-```
+```cpp
 int diameterOpt(struct TreeNode* root, int* height)
 {
     // lh --> Height of left subtree
