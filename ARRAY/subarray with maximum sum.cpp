@@ -1,3 +1,4 @@
+```cpp
 #include<iostream>
 #include<climits>
 using namespace std;
@@ -56,3 +57,4 @@ int main()
     int max_sum = maxSubArraySum(a, n);
     return 0;
 }
+```
