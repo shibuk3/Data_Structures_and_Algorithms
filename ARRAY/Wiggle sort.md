@@ -100,3 +100,74 @@ public:
     }
 };
 ```
+## __Wiggle Sort 2__
+
+- [Question Link](https://leetcode.com/problems/wiggle-sort-ii/)
+- [Explaination video of TC=(nlogn), SC=O(n) solution](https://www.youtube.com/watch?v=mwsjU6CHOb4)
+- [Leetcode discuss blog for TC=(n), SC=O(1)](https://leetcode.com/problems/wiggle-sort-ii/discuss/77677/O(n)%2BO(1)-after-median-Virtual-Indexing)
+
+
+
+![image](https://user-images.githubusercontent.com/51910127/145410254-fdc9797f-b5a3-4589-8170-ff90c0d35de0.png)
+![image](https://user-images.githubusercontent.com/51910127/145410314-96151db7-69ef-4e27-817e-2735a1cddbbd.png)
+
+
+```cpp
+void wiggleSort(vector<int>& nums) {
+    int n = nums.size();
+    
+    // Find a median.
+    auto midptr = nums.begin() + n / 2;
+    nth_element(nums.begin(), midptr, nums.end());
+    int mid = *midptr;
+    
+    // Index-rewiring.
+    #define A(i) nums[(1+2*(i)) % (n|1)]
+
+    // 3-way-partition-to-wiggly in O(n) time with O(1) space.
+    int i = 0, j = 0, k = n - 1;
+    while (j <= k) {
+        if (A(j) > mid)
+            swap(A(i++), A(j++));
+        else if (A(j) < mid)
+            swap(A(j), A(k--));
+        else
+            j++;
+    }
+}
+```
+
+```md
+ my understanding
+here. (n|1) is related to n being even or odd. When n is even, we only need nums[1 + 2i % (n+1)]
+instead of nums[1 + 2i % (n|1)]; when n is odd, we need nums[1 + 2i % n] instead of nums[1 + 2i % (n|1)]. 
+To combine the two cases together(n being either even or odd), we can simply use one formula nums[1 + 2*i % (n|1)].
+
+
+Let's say nums is [10,11,...,19]. Then after nth_element and ordinary partitioning,
+we might have this (15 is my median):
+
+index:     0  1  2  3   4   5  6  7  8  9
+number:   18 17 19 16  15  11 14 10 13 12
+I rewire it so that the first spot has index 5, the second spot has index 0, etc,
+so that I might get this instead:
+
+index:     5  0  6  1  7  2  8  3  9  4
+number:   11 18 14 17 10 19 13 16 12 15
+And 11 18 14 17 10 19 13 16 12 15 is perfectly wiggly. And the whole partitioning-to-wiggly-arrangement
+(everything after finding the median) only takes O(n) time and O(1) space.
+
+If the above description is unclear, maybe this explicit listing helps:
+
+Accessing A(0) actually accesses nums[1].
+Accessing A(1) actually accesses nums[3].
+Accessing A(2) actually accesses nums[5].
+Accessing A(3) actually accesses nums[7].
+Accessing A(4) actually accesses nums[9].
+Accessing A(5) actually accesses nums[0].
+Accessing A(6) actually accesses nums[2].
+Accessing A(7) actually accesses nums[4].
+Accessing A(8) actually accesses nums[6].
+Accessing A(9) actually accesses nums[8].
+
+```
