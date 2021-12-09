@@ -9,7 +9,16 @@
 --[video link](https://www.youtube.com/watch?v=m18Hntz4go8)
 - [Find Excel column name from a given column number](https://www.geeksforgeeks.org/find-excel-column-name-given-number/)
 - [Find minimum number of steps to make the product of all the elements of the array 1, by incresing or decreasing the element of array by 1 in one step](https://www.youtube.com/watch?v=mPPNFyBNyJY&list=WL&index=172&t=1212s)
-
+- [Minimum Number of Platforms Required for a Railway/Bus Station](https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/)
+- bottom/ right view of binary tree
+- There are N gas stations along a circular route, where the amount of gas
+at the ith station is gas[i].  You have a car with an unlimited gas tank 
+and it costs cost[i] of gas to travel from the ith station to its next 
+i + 1) th station. You begin the journey with an empty tank at one of
+ the gas stations. Given two integer arrays gas and cost, return the starting gas station.
+ - [Bottom view of binary tree in both BFS and DFS.](https://www.geeksforgeeks.org/bottom-view-of-a-binary-tree-using-recursion/)
+ 
+ 
 ### __HARD___
 - [Given a number in words, print the number](https://www.geeksforgeeks.org/convert-number-to-words/)
 - [given a number, convert into words](https://www.geeksforgeeks.org/program-to-print-the-given-digit-in-words/)
