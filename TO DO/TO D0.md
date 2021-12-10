@@ -31,6 +31,8 @@ The following question can be solved by monotonic queue:
 
 
 -------
+
+```md
 Set of must do question = https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/?ref=leftbar-rightbar
 17 june
 Link-https://www.geeksforgeeks.org/minimum-length-unsorted-subarray-sorting-which-makes-the-complete-array-sorted/
@@ -709,3 +711,4 @@ Concept- https://www.youtube.com/watch?v=2JSQIhPcHQg&list=PL_z_8CaSLPWeYfhtuKHj-
 To do- 
 1-	Subarray sum equals k
 2-	
+```
