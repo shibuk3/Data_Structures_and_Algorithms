@@ -189,5 +189,6 @@ solution is O(N Log k).
 2. Create a min heap of size k and insert 1st element in all the arrays into the heap 
 3. Repeat following steps while priority queue is not empty. 
 …..a) Remove minimum element from heap (minimum is always at root) and store it in output array. 
-…..b) Insert next element from the array from which the element is extracted. If the array doesn’t have any more elements, then do nothing.
+…..b) Insert next element from the array from which the element is extracted. If the
+array doesn’t have any more elements, then do nothing.
 ```
