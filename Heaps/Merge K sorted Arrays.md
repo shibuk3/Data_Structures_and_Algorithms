@@ -163,3 +163,27 @@ half and at each level the k arrays are traversed. So time Complexity is O( n * 
 - Space Complexity: O( n * k * log k). 
 - In each level O( n*k ) space is required So Space Complexity is O( n * k * log k).
 ```
+### Solution 3: Min Heap based__
+
+```md
+
+Alternative Efficient Approach: The idea is to use Min Heap. This MinHeap based solution
+has the same time complexity which is O(NK log K). But for a different and particular
+sized array, this solution works much better. The process must start with creating a
+MinHeap and inserting the first element of all the k arrays. Remove the root element 
+of Minheap and put it in the output array and insert the next element from the array 
+of removed element. To get the result the step must continue until there is no element
+in the MinHeap left. 
+
+MinHeap: A Min-Heap is a complete binary tree in which the value in each internal node
+is smaller than or equal to the values in the children of that node. Mapping the elements 
+of a heap into an array is trivial: if a node is stored at index k, then its left child is stored at index 2k + 1 and its right child at index 2k + 2. 
+
+Algorithm: 
+- Create a min Heap and insert the first element of all k arrays.
+- Run a loop until the size of MinHeap is greater than zero.
+- Remove the top element of the MinHeap and print the element.
+- Now insert the next element from the same array in which the removed element belonged.
+- If the array doesn’t have any more elements, then replace root with infinite.
+After replacing the root, heapify the tree.
+```
