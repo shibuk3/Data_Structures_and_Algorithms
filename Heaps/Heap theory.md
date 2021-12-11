@@ -1,7 +1,9 @@
 ### __Heap theory__
 
 - [Video link](https://www.youtube.com/watch?v=HqPJF2L5h9U)
-
+- Deletion TC=O(logn)  
+- Insertion TC=O(logn),O(logh)
+- Heap sort TC=O(nlogn)
 ```md
 Heap sort is a comparison-based sorting technique based on Binary Heap data structure.
 It is similar to selection sort where we first find the minimum element and place 
@@ -35,7 +37,7 @@ Starting from a complete binary tree, we can modify it to become a Max-Heap by r
 a function called ‘heapify’ on all the non-leaf elements of the heap. i.e. ‘heapify’ uses
 recursion.
 
-
+```
 ```cpp
 // C++ program for implementation of Heap Sort
 #include <iostream>
