@@ -39,5 +39,22 @@ public:
 __USE DP HERE__
 
 ```
+int find(vector<vector<int>>& save, int m , int n, int i ,int j)
+{
+    if(i<0||j<0||i>m||j>n) return 0;
+    
+    if(save[i][j]!=-1) return save[i][j];
+    if(i==0&&j==0) return 1;
+    
+    return save[i][j]=find(save,m,n,i,j-1)+find(save,m,n,i-1,j);
 
+}
+
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+      vector<vector<int>> save(m, vector<int>(n,-1));
+      return  find(save,m,n,m-1, n-1);
+    }
+};
 ```
