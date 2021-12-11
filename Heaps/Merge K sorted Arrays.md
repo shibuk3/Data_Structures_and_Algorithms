@@ -38,7 +38,9 @@ Complexity Analysis:
 ### __Solution 2:Merge sort__
 ```md
 Efficient Approach The process might begin with merging arrays into groups of two
-. After the first merge, we have k/2 arrays. Again merge arrays in groups, now we have k/4 arrays. This is similar to merge sort. Divide k arrays into two halves containing an equal number of arrays until there are two arrays in a group. This is followed by merging the arrays in a bottom-up manner. 
+. After the first merge, we have k/2 arrays. Again merge arrays in groups, now we have k/4 arrays.
+This is similar to merge sort. Divide k arrays into two halves containing an equal number of arrays
+until there are two arrays in a group. This is followed by merging the arrays in a bottom-up manner. 
 
 Algorithm: 
 - Create a recursive function which takes k arrays and returns the output array.
