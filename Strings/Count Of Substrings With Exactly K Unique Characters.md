@@ -283,7 +283,7 @@ Solution 2: efficient approach
 
 			for (char c : word) {
 				auto it = upper_bound (alpha[c - 'a'].begin (), alpha[c - 'a'].end (), x);
-				if (it == alpha[c - 'a'].end ()) found = false;
+				if (it == alpha[c - 'a'].end ()) {found = false;break;}
 				else x = *it;
 			}
 
