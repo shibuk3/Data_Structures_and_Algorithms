@@ -15,6 +15,7 @@
 __Advantages-__
 - It saves the time that was being wasted earlier for each individual process in context switching from one environment to another environment.
 - No manual intervention is needed.
+
  __Disadvantages-__
 1. Priority can not be set for the jobs.
 In batch operating system,
