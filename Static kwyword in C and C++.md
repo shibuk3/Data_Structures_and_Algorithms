@@ -73,6 +73,21 @@ For example, following program prints:
 Value of g = 0
 Value of sg = 0
 Value of s = 0
+```c
+#include<stdio.h>
+int g;  //g = 0, global objects have static storage duration
+static int gs; //gs = 0, global static objects have static storage duration
+int main()
+{
+  static int s; //s = 0, static objects have static storage duration
+  printf("Value of g = %d", g);
+  printf("\nValue of gs = %d", gs);
+  printf("\nValue of s = %d", s);
+  
+  getchar();
+  return 0;
+}
+```
 
 - In C, static variables can only be initialized using constant literals. For example, following program fails in compilation. 
 ```c
@@ -121,3 +136,154 @@ inside the function (stack segment) or allocate memory dynamically(heap segment)
 Whatever might be the case, all structure members should reside in the same memory segment because the value for the structure
 element is fetched by counting the offset of the element from the beginning address of the structure. Separating out one membe
 r alone to data segment defeats the purpose of static variable and it is possible to have an entire structure as static.
+
+### __Static functions in C__
+
+In C, functions are global by default. The “static” keyword before a function name makes it static. For example, below function fun() is static.
+```c
+static int fun(void)
+{
+  printf("I am a static function ");
+}
+```
+Unlike global functions in C, access to static functions is restricted to the file where they are declared. Therefore, when we want to restrict access to functions, we make them static. Another reason for making functions static can be reuse of the same function name in other files.
+
+For example, if we store following program in one file file1.c
+```c
+/* Inside file1.c */ 
+static void fun1(void)
+{
+  puts("fun1 called");
+}
+```
+```c
+And store following program in another file file2.c
+
+
+/* Inside file2.c  */ 
+int main(void)
+{
+  fun1(); 
+  getchar();
+  return 0;  
+}
+```
+Now, if we compile the above code with command “gcc file2.c file1.c”, we get the error “undefined reference to 
+`fun1’” . This is because fun1() is declared static in file1.c and cannot be used in file2.c.
+
+Please write comments if you find anything incorrect in the above article, or want to share more information 
+about static functions in C.
+
+### __Static Keyword in C++__
+Static keyword has different meanings when used with different types. We can use static keyword with:
+
+Static Variables : Variables in a function, Variables in a class
+Static Members of Class : Class objects and Functions in a class
+
+Let us now look at each one of these use of static in details:
+
+Static Variables
+
+Static variables in a Function: When a variable is declared as static, space for it gets allocated for the lifetime
+of the program. Even if the function is called multiple times, space for the static variable is allocated only once 
+and the value of variable in the previous call gets carried through the next function call. This is useful for implementing
+coroutines in C/C++ or any other application where previous state of function needs to be stored.
+```c++
+// C++ program to demonstrate 
+// the use of static Static 
+// variables in a Function
+#include <iostream>
+#include <string>
+using namespace std;
+  
+void demo()
+{ 
+    // static variable
+    static int count = 0;
+    cout << count << " ";
+      
+    // value is updated and
+    // will be carried to next
+    // function calls
+    count++;
+}
+  
+int main()
+{
+    for (int i=0; i<5; i++)    
+        demo();
+    return 0;
+}
+Output:
+
+0 1 2 3 4 
+```
+You can see in the above program that the variable count is declared as static. So, its value is carried through 
+the function calls. The variable count is not getting initialized for every time the function is called.
+
+- Static variables in a class: As the variables declared as static are initialized only once as they are allocated
+space in separate static storage so, the static variables in a class are shared by the objects. There can not be
+multiple copies of same static variables for different objects. Also because of this reason static variables can not
+be initialized using constructors.
+```c++
+// C++ program to demonstrate static
+// variables inside a class
+  
+#include<iostream>
+using namespace std;
+  
+class GfG
+{
+   public:
+     static int i;
+      
+     GfG()
+     {
+        // Do nothing
+     };
+};
+  
+int main()
+{
+  GfG obj1;
+  GfG obj2;
+  obj1.i =2;
+  obj2.i = 3;
+    
+  // prints value of i
+  cout << obj1.i<<" "<<obj2.i;   
+}
+```
+You can see in the above program that we have tried to create multiple copies of the static variable i for multiple objects.
+But this didn’t happen. So, a static variable inside a class should be initialized explicitly by the user using the class
+name and scope resolution operator outside the class as shown below:
+```cpp
+// C++ program to demonstrate static
+// variables inside a class
+  
+#include<iostream>
+using namespace std;
+  
+class GfG
+{
+public:
+    static int i;
+      
+    GfG()
+    {
+        // Do nothing
+    };
+};
+  
+int GfG::i = 1;
+  
+int main()
+{
+    GfG obj;
+    // prints value of i
+    cout << obj.i; 
+}
+Output:
+
+1
+```
