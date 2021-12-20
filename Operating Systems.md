@@ -12,8 +12,10 @@
 - Then, operator submits the batches to the processor
 - All the jobs of one batch are executed together.
 
+```md
 __Advantages-__
-- It saves the time that was being wasted earlier for each individual process in context switching from one environment to another environment.
+- It saves the time that was being wasted earlier for each individual process in context switching 
+from one environment to another environment.
 - No manual intervention is needed.
 
  __Disadvantages-__
@@ -36,10 +38,12 @@ In batch operating system,
 
 4. There is a lack of interaction between a user and his job.
 - Once a batch is submitted for execution, the user is not able to interact with any of his jobs.
-- If a job requires the user to input data during run time, then user must wait till the other jobs of the batch get executed.
+- If a job requires the user to input data during run time, then user must wait till the other
+jobs of the batch get executed.
 - This also increases the overall execution time.
-
+```
 ### __Process States in Operating System-__
+```md
 1. New State-
 A process is said to be in new state when a program present in the secondary memory is initiated for execution.
  
@@ -62,8 +66,10 @@ A process is said to be in new state when a program present in the secondary mem
 - After the I/O operation gets completed or resource becomes available, the process moves to the ready state.
  
 6. Suspend Ready State-
-- A process moves from ready state to suspend ready state if a process with higher priority has to be executed but the main memory is full.
-- Moving a process with lower priority from ready state to suspend ready state creates a room for higher priority process in the ready state.
+- A process moves from ready state to suspend ready state if a process with higher priority has to
+ be executed but the main memory is full.
+- Moving a process with lower priority from ready state to suspend ready state creates a room
+ for higher priority process in the ready state.
 - The process remains in the suspend ready state until the main memory becomes available.
 - When main memory becomes available, the process is brought back to the ready state.
 
@@ -74,7 +80,7 @@ A process is said to be in new state when a program present in the secondary mem
  priority process in the ready state.
 - After the resource becomes available, the process is moved to the suspend ready state.
 - After main memory becomes available, the process is moved to the ready state.
-
+```
 ```md
 A process necessarily goes through minimum 4 states. 
 - The minimum number of states through which a process compulsorily goes through is 4.
