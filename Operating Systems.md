@@ -145,10 +145,8 @@ point to the next instruction.
 7. List of Open Devices-
 - PCB maintains a list of open devices used by the process during its execution.
  
-
 Important Notes-
- 
-
-PCB of each process resides in the main memory.
-There exists only one PCB corresponding to each process.
-PCB of all the processes are present in a linked list.
+- PCB of each process resides in the main memory.
+- There exists only one PCB corresponding to each process.
+- PCB of all the processes are present in a linked list.
+```
