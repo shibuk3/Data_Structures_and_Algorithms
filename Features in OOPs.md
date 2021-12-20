@@ -413,7 +413,8 @@ be used to distinguish overloaded function declarations. In particular, for any 
 “pointer to T,” “pointer to const T,” and “pointer to volatile T” are considered distinct parameter types, as are
 “reference to T,” “reference to const T,” and “reference to volatile T.”
 
-- Two parameter declarations that differ only in their default arguments are equivalent. For example, following program fails in compilation with error “redefinition of `int f(int, int)’ “
+- Two parameter declarations that differ only in their default arguments are equivalent. For example, following program fails in compilation 
+with error “redefinition of `int f(int, int)’ “
 
 ```cpp
 #include<iostream>
@@ -522,3 +523,157 @@ Output:
 print derived class
 show base class
  ```
+__Definitions:__
+- A virtual function is a member function which is declared in the base class using the keyword virtual and is re-defined
+ (Overriden) by the derived class.
+- The term Polymorphism means the ability to take many forms. It occurs if there is a hierarchy of classes which are
+ all related to each other by inheritance.
+ 
+The idea is that virtual functions are called according to the type of the object instance pointed to or referenced, not according to the type of the pointer or reference.
+In other words, virtual functions are resolved late, at runtime.
+ 
+Now, we’ll look at an example using both these concepts to clarify your understanding.
+```cpp
+#include <iostream>
+using namespace std;
+ 
+// Base class
+class Shape
+{
+public:
+    Shape(int l, int w)
+    {
+        length = l;
+        width = w;
+    } // parameterized constructor
+    int get_Area()
+    {
+        cout << "This is call to parent class area" << endl;
+          return 1;
+    }
+ 
+protected:
+    int length, width;
+};
+ 
+// Derived class
+class Square : public Shape
+{
+public:
+    Square(int l = 0, int w = 0)
+        : Shape(l, w)
+    {
+    } // declaring and initializing derived class
+      // constructor
+    int get_Area()
+    {
+        cout << "Square area: " << length * width << endl;
+        return (length * width);
+    }
+};
+// Derived class
+class Rectangle : public Shape
+{
+public:
+    Rectangle(int l = 0, int w = 0)
+        : Shape(l, w)
+    {
+    } // declaring and initializing derived class
+      // constructor
+    int get_Area()
+    {
+        cout << "Rectangle area: " << length * width
+             << endl;
+        return (length * width);
+    }
+};
+ 
+int main(void)
+{
+    Shape* s;
+    Square sq(5, 5); // making object of child class Square
+    Rectangle rec(
+        4, 5); // making object of child class Rectangle
+ 
+    s = &sq;
+    s->get_Area();
+    s = &rec;
+    s->get_Area();
+ 
+    return 0;
+}
+Output
+This is call to parent class area
+This is call to parent class area
+```
+ In the above function:
+
+- we store the address of each child class Rectangle and Square object in s and
+- then we call the get_Area() function on it,
+- ideally, it should have called the respective get_Area() functions of the child classes but
+- instead it calls the get_Area() defined in the base class.
+- This happens due static linkage which means the call to get_Area() is getting set only once by the compiler which
+ is in the base class.
+
+Virtual functions allow us to create a list of base class pointers and call methods of any of the derived classes
+without even knowing kind of derived class object. 
+For example: Consider an employee management software for an organization. 
+Let the code has a simple base class Employee , the class contains virtual functions like raiseSalary(), transfer(),
+promote(), etc. Different types of employees like Manager, Engineer, etc. may have their own implementations of the
+virtual functions present in base class Employee. 
+In our complete software, we just need to pass a list of employees everywhere and call appropriate functions without 
+even knowing the type of employee. For example, we can easily raise the salary of all employees by iterating through the
+list of employees. Every type of employee may have its own logic in its class, but we don’t need to worry about them 
+because if raiseSalary() is present for a specific employee type, only that function would be called.
+```cpp
+class Employee {
+public:
+    virtual void raiseSalary()
+    {
+        /* common raise salary code */
+    }
+ 
+    virtual void promote() { /* common promote code */ }
+};
+ 
+class Manager : public Employee {
+    virtual void raiseSalary()
+    {
+        /* Manager specific raise salary code, may contain
+          increment of manager specific incentives*/
+    }
+ 
+    virtual void promote()
+    {
+        /* Manager specific promote */
+    }
+};
+ 
+// Similarly, there may be other types of employees
+ 
+// We need a very simple function
+// to increment the salary of all employees
+// Note that emp[] is an array of pointers
+// and actual pointed objects can
+// be any type of employees.
+// This function should ideally
+// be in a class like Organization,
+// we have made it global to keep things simple
+void globalRaiseSalary(Employee* emp[], int n)
+{
+    for (int i = 0; i < n; i++)
+ 
+        // Polymorphic Call: Calls raiseSalary()
+        // according to the actual object, not
+        // according to the type of pointer
+        emp[i]->raiseSalary();
+}
+```
+Like globalRaiseSalary(), there can be many other operations that can be performed on a list of employees without even
+knowing the type of the object instance. 
+Virtual functions are so useful that later languages like Java keep all methods as virtual by default.
+How does the compiler perform runtime resolution?
+The compiler maintains two things to serve this purpose:
+
+- vtable: A table of function pointers, maintained per class. 
+- vptr: A pointer to vtable, maintained per object instance
