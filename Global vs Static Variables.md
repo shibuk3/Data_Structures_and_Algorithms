@@ -98,3 +98,61 @@ and on the second call, the output is the incremented value of the first increas
 
 This proves that the static variable inside a function is declared only once on the first 
 function call and the remaining successive function calls use the same copy.
+
+- What if there exists a local variable with the same name as that of global variable inside a function?
+
+Let us repeat the question once again. The question is : if there is a variable inside a function with 
+the same name as that of a global variable and if the function tries to access the variable with that
+name, then which variable will be given precedence? Local variable or Global variable? Look at the 
+below program to understand the question:  
+
+```cpp
+// CPP program to illustrate
+// scope of local variables
+// and global variables together
+#include<iostream>
+using namespace std;
+ 
+// global variable
+int global = 5;
+ 
+// main function
+int main()
+{  
+    // local variable with same
+    // name as that of global variable
+     
+    int global = 2;
+    cout << global << endl;
+}
+output= 2
+```
+- Usually when two variable with same name are defined then the compiler produces a compile time error. 
+But if the variables are defined in different scopes then the compiler allows it.
+- Whenever there is a local variable defined with same name as that of a global variable then the 
+compiler will give precedence to the local variable
+
+__How to access a global variable when there is a local variable with same name?__
+```cpp
+// C++ program to show that we can access a global
+// variable using scope resolution operator :: when 
+// there is a local variable with same name
+#include<iostream>
+using namespace std;
+  
+// Global x 
+int x = 0; 
+   
+int main()
+{
+  // Local x   
+  int x = 10;
+  cout << "Value of global x is " << ::x;
+  cout<< "\nValue of local x is " << x; 
+  return 0;
+}
+Output: 
+
+Value of global x is 0
+Value of local x is 10
+```
