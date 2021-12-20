@@ -51,6 +51,7 @@ public:
 ```
 
 ### __Uglu Numbers II__
+- [explaination video](https://www.youtube.com/watch?v=Lj68VJ1wu84)
 
 ```md
 An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
