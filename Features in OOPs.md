@@ -147,3 +147,378 @@ Advantages of Data Abstraction:
 - Avoids code duplication and increases reusability.
 - Can change internal implementation of class independently without affecting the user.
 - Helps to increase security of an application or program as only important details are provided to the user.
+
+### __Polymorphism in C++__
+The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability 
+of a message to be displayed in more than one form. A real-life example of polymorphism, a person at the same
+time can have different characteristics. Like a man at the same time is a father, a husband, an employee. So
+the same person posses different behavior in different situations. This is called polymorphism. Polymorphism 
+is considered as one of the important features of Object Oriented Programming.
+
+In C++ polymorphism is mainly divided into two types:
+- Compile time Polymorphism
+- Runtime Polymorphism
+
+__Compile time polymorphism:__ This type of polymorphism is achieved by function overloading or operator overloading.
+Function Overloading: When there are multiple functions with same name but different parameters then these functions are
+said to be overloaded. Functions can be overloaded by change in number of arguments or/and change in type of arguments.
+
+Rules of Function Overloading
+- In C++ and Java, functions can not be overloaded if they differ only in the return type.
+
+```cpp
+// C++ program for function overloading
+#include <bits/stdc++.h>
+  
+using namespace std;
+class Geeks
+{
+    public:
+      
+    // function with 1 int parameter
+    void func(int x)
+    {
+        cout << "value of x is " << x << endl;
+    }
+      
+    // function with same name but 1 double parameter
+    void func(double x)
+    {
+        cout << "value of x is " << x << endl;
+    }
+      
+    // function with same name and 2 int parameters
+    void func(int x, int y)
+    {
+        cout << "value of x and y is " << x << ", " << y << endl;
+    }
+};
+  
+int main() {
+      
+    Geeks obj1;
+      
+    // Which function is called will depend on the parameters passed
+    // The first 'func' is called 
+    obj1.func(7);
+      
+    // The second 'func' is called
+    obj1.func(9.132);
+      
+    // The third 'func' is called
+    obj1.func(85,64);
+    return 0;
+} 
+Output:
+
+value of x is 7
+value of x is 9.132
+value of x and y is 85, 64
+```
+In the above example, a single function named func acts differently in three different situations which is the property of polymorphism.
+
+### __Function overloading and const keyword__
+Predict the output of following C++ program.
+```cpp
+#include<iostream>
+using namespace std;
+  
+class Test
+{
+protected:
+    int x;
+public:
+    Test (int i):x(i) { }
+    void fun() const
+    {
+        cout << "fun() const called " << endl;
+    }
+    void fun()
+    {
+        cout << "fun() called " << endl;
+    }
+};
+  
+int main()
+{
+    Test t1 (10);
+    const Test t2 (20);
+    t1.fun();
+    t2.fun();
+    return 0;
+}
+Output: The above program compiles and runs fine, and produces following output.
+
+fun() called
+fun() const called
+```
+The two methods ‘void fun() const’ and ‘void fun()’ have same signature except that one is const and other is not.
+Also, if we take a closer look at the output, we observe that, ‘const void fun()’ is called on const object and ‘void fun()’ 
+is called on non-const object.
+C++ allows member methods to be overloaded on the basis of const type. Overloading on the basis of const type can be useful
+when a function return reference or pointer. We can make one function const, that returns a const reference or const pointer,
+other non-const function, that returns non-const reference or pointer. See this for more details.
+
+What about parameters?
+Rules related to const parameters are interesting. Let us first take a look at following two examples. The program 1 
+fails in compilation, but program 2 compiles and runs fine.
+```cpp
+// PROGRAM 1 (Fails in compilation)
+#include<iostream>
+using namespace std;
+  
+void fun(const int i)
+{
+    cout << "fun(const int) called ";
+}
+void fun(int i)
+{
+    cout << "fun(int ) called " ;
+}
+int main()
+{
+    const int i = 10;
+    fun(i);
+    return 0;
+}
+Output:
+
+Compiler Error: redefinition of 'void fun(int)'
+```
+```cpp
+// PROGRAM 2 (Compiles and runs fine)
+#include<iostream>
+using namespace std;
+  
+void fun(char *a)
+{
+  cout << "non-const fun() " << a;
+}
+  
+void fun(const char *a)
+{
+  cout << "const fun() " << a;
+}
+  
+int main()
+{
+  const char *ptr = "GeeksforGeeks";
+  fun(ptr);
+  return 0;
+}
+Output:
+const fun() GeeksforGeeks
+```
+C++ allows functions to be overloaded on the basis of const-ness of parameters only if the const parameter is a
+reference or a pointer. That is why the program 1 failed in compilation, but the program 2 worked fine. This rule
+actually makes sense. In program 1, the parameter ‘i’ is passed by value, so ‘i’ in fun() is a copy of ‘i’ in main().
+Hence fun() cannot modify ‘i’ of main(). Therefore, it doesn’t matter whether ‘i’ is received as a const paramete
+r or normal parameter. When we pass by reference or pointer, we can modify the value referred or pointed, 
+so we can have two versions of a function, one which can modify the referred or pointed value, other which can not.
+
+As an exercise, predict the output of following program.
+```cpp
+#include<iostream>
+using namespace std;
+  
+void fun(const int &i)
+{
+    cout << "fun(const int &) called ";
+}
+void fun(int &i)
+{
+    cout << "fun(int &) called " ;
+}
+int main()
+{
+    const int i = 10;
+    fun(i);
+    return 0;
+}
+```
+### __Functions that cannot be overloaded in C++__
+In C++, following function declarations cannot be overloaded.
+
+- Function declarations that differ only in the return type. For example, the following program fails in compilation.
+```cpp
+#include<iostream>
+int foo() { 
+  return 10; 
+}
+  
+char foo() { 
+  return 'a'; 
+}
+  
+int main()
+{
+   char x = foo();
+   getchar();
+   return 0;
+}
+```
+- Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a
+ static member function declaration. For example, following program fails in compilation.
+```cpp
+#include<iostream>
+class Test {
+   static void fun(int i) {}
+   void fun(int i) {}   
+};
+  
+int main()
+{
+   Test t;
+   getchar();
+   return 0;
+}
+```
+- Parameter declarations that differ only in a pointer * versus an array [] are equivalent. That is, the array 
+declaration is adjusted to become a pointer declaration. Only the second and subsequent array dimensions are 
+significant in parameter types. For example, following two function declarations are equivalent.
+```cpp
+int fun(int *ptr);
+int fun(int ptr[]); // redeclaration of fun(int *ptr)
+```
+- Parameter declarations that differ only in that one is a function type and the other is a pointer to the same function type are equivalent.
+```cpp
+void h(int ());
+void h(int (*)()); // redeclaration of h(int())
+```
+- Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent. That is, 
+- the const and volatile type-specifiers for each parameter type are ignored when determining which function is being 
+- declared, defined, or called. For example, following program fails in compilation with error “redefinition of `int f(int)’ “
+```cpp
+#include<iostream>
+#include<stdio.h>
+   
+using namespace std;
+   
+int f ( int x) {
+    return x+10;
+}
+  
+int f ( const int x) {
+    return x+10;
+}
+  
+int main() {     
+  getchar();
+  return 0;
+}
+```
+Only the const and volatile type-specifiers at the outermost level of the parameter type specification are ignored in 
+this fashion; const and volatile type-specifiers buried within a parameter type specification are significant and can 
+be used to distinguish overloaded function declarations. In particular, for any type T,
+“pointer to T,” “pointer to const T,” and “pointer to volatile T” are considered distinct parameter types, as are
+“reference to T,” “reference to const T,” and “reference to volatile T.”
+
+- Two parameter declarations that differ only in their default arguments are equivalent. For example, following program fails in compilation with error “redefinition of `int f(int, int)’ “
+
+```cpp
+#include<iostream>
+#include<stdio.h>
+   
+using namespace std;
+   
+int f ( int x, int y) {
+    return x+10;
+}
+  
+int f ( int x, int y = 10) {
+    return x+y;
+}
+  
+int main() {     
+  getchar();
+  return 0;
+}
+```
+
+### __Operator Overloading:__
+C++ also provide option to overload operators. For example, we can make the operator (‘+’) for string class to 
+concatenate two strings. We know that this is the addition operator whose task is to add two operands. So a 
+single operator ‘+’ when placed between integer operands , adds them and when placed between string operands,
+concatenates them.
+```cpp
+// CPP program to illustrate
+// Operator Overloading
+#include<iostream>
+using namespace std;
+   
+class Complex {
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i =0)  {real = r;   imag = i;}
+       
+    // This is automatically called when '+' is used with
+    // between two Complex objects
+    Complex operator + (Complex const &obj) {
+         Complex res;
+         res.real = real + obj.real;
+         res.imag = imag + obj.imag;
+         return res;
+    }
+    void print() { cout << real << " + i" << imag << endl; }
+};
+   
+int main()
+{
+    Complex c1(10, 5), c2(2, 4);
+    Complex c3 = c1 + c2; // An example call to "operator+"
+    c3.print();
+}
+Output:
+
+12 + i9
+```
+### __Runtime polymorphism: Function overriding__
+- Function overriding on the other hand occurs when a derived class has a definition for one of the member functions of
+ the base class. That base function is said to be overridden.
+ ```cpp
+ // C++ program for function overriding
+  
+#include <bits/stdc++.h>
+using namespace std;
+  
+class base
+{
+public:
+    virtual void print ()
+    { cout<< "print base class" <<endl; }
+   
+    void show ()
+    { cout<< "show base class" <<endl; }
+};
+   
+class derived:public base
+{
+public:
+    void print () //print () is already virtual function in derived class, we could also declared as virtual void print () explicitly
+    { cout<< "print derived class" <<endl; }
+   
+    void show ()
+    { cout<< "show derived class" <<endl; }
+};
+  
+//main function
+int main() 
+{
+    base *bptr;
+    derived d;
+    bptr = &d;
+       
+    //virtual function, binded at runtime (Runtime polymorphism)
+    bptr->print(); 
+       
+    // Non-virtual function, binded at compile time
+    bptr->show(); 
+  
+    return 0;
+} 
+Output:
+
+print derived class
+show base class
+ ```
