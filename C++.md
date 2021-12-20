@@ -1,3 +1,5 @@
+
+### __Differences between C and C++__
 | C        | C++     |
 |----------|---------|
 | C was developed by Dennis Ritchie between the year 1969 and 1973 at AT&T Bell Labs. | C++ was developed by Bjarne Stroustrup in 1979. |
@@ -21,3 +23,12 @@
 |   C provides malloc() and calloc() functions for dynamic memory allocation, and free() for memory de-allocation.       |   C++ provides new operator for memory allocation and delete operator for memory de-allocation.      |
 |   scanf() and printf() functions are used for input/output in C.       |   cin and cout are used for input/output in C++.      |
 |   C structures don’t have access modifiers.       |   C ++ structures have access modifiers.      |
+
+### __Similarities between C and C++__
+- Both the languages have a similar syntax.
+- Code structure of both the languages are same.
+- The compilation of both the languages is similar.
+- They share the same basic syntax. Nearly all of C’s operators and keywords are also present in C++ and do the same thing.
+- C++ has a slightly extended grammar than C, but the basic grammar is the same.
+- Basic memory model of both is very close to the hardware.
+- Same notions of stack, heap, file-scope and static variables are present in both the languages.
