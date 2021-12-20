@@ -677,3 +677,15 @@ The compiler maintains two things to serve this purpose:
 
 - vtable: A table of function pointers, maintained per class. 
 - vptr: A pointer to vtable, maintained per object instance
+
+Compiler adds additional code at two places to maintain and use vptr.
+- Code in every constructor. This code sets the vptr of the object being created. This code sets vptr to point 
+to the vtable of the class. 
+- Code with polymorphic function call (e.g. bp->show() in above code). Wherever a polymorphic call is 
+made, the compiler inserts code
+ to first look for vptr using base class pointer or reference (In the above example, since pointed or referred 
+ object is of derived type, vptr of derived class is accessed). Once vptr is fetched, vtable of derived class
+ can be accessed. Using vtable, address of derived class function show() is accessed and called. 
+ 
+Is this a standard way for implementation of run-time polymorphism in C++? 
+The C++ standards do not mandate exactly how runtime polymorphism must be implemented, but compilers generally use minor variations on the same basic model.
