@@ -74,3 +74,26 @@ A process is said to be in new state when a program present in the secondary mem
  priority process in the ready state.
 - After the resource becomes available, the process is moved to the suspend ready state.
 - After main memory becomes available, the process is moved to the ready state.
+
+```md
+A process necessarily goes through minimum 4 states. 
+- The minimum number of states through which a process compulsorily goes through is 4.
+- These states are new state, ready state, run state and terminate state.
+- However, if a process also requires the I/O operation, then minimum number of states is 5.
+
+A single processor can execute only one process at a time.
+- A single processor can not more than one processes simultaneously.
+- If n processors are present in the system, then only n processes can be executed simultaneously.
+
+Moving a process from wait state to suspend wait state is a better alternative.
+- Consider a process with higher priority arrives and the main memory is full.
+- Then, there are two ways to make room for it.
+ 
+These two ways are-
+- Moving a process with lower priority from ready state to suspend ready state.
+- Moving a process with lower priority from wait state to suspend wait state.
+  
+Out of these-
+- Moving a process from wait state to suspend wait state is a better alternative.
+- This is because the process is already waiting for some blocked resource.
+```
