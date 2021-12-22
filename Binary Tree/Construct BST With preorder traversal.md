@@ -38,3 +38,34 @@ public:
 };
 
 ```
+### Solution 2: O(n)
+
+```cpp
+TreeNode* find(int min1, int max1, int* cur, vector<int>&v)
+{
+   if(*cur>=v.size()){return NULL;}
+    if(v[*cur]<max1&&min1<v[*cur])
+    {
+        TreeNode* temp=new TreeNode();
+        temp->val=v[*cur];
+        *cur =*cur +1;
+        temp->left=find(min1,temp->val,cur,v);
+        temp->right=find(temp->val,max1,cur,v);
+        return temp;
+    }
+    else
+        return NULL;
+    
+}
+
+class Solution {
+public:
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        TreeNode* root=NULL; int cur=0;
+        root=find(INT_MIN, INT_MAX,&cur,preorder);
+        
+        return root;
+            
+    }
+};
+```
