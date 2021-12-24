@@ -52,3 +52,13 @@ through which both can talk and listen at the same time.
 
 Channel Capacity=2* Bandwidth*propagation Delay
 ```
+### 
+|Synchronous Transmission  |Asynchronous Transmission |
+|--------|----------------|
+|In Synchronous transmission, Data is sent in form of blocks or frames.      | In asynchronous transmission, Data is sent in form of byte or character.          |
+| Synchronous transmission is fast.      | Asynchronous transmission is slow.          |
+|Synchronous transmission is costly.     |Asynchronous transmission is economical.         |
+|In Synchronous transmission, time interval of transmission is constant.      | In asynchronous transmission, time interval of transmission is not constant, it is random.      |
+| In Synchronous transmission, There is no gap present between data.     | In asynchronous transmission, There is present gap between data.          |
+|Efficient use of transmission line is done in synchronous transmission.     | While in asynchronous transmission, transmission line remains empty during gap in character transmission.          |
+| Synchronous transmission needs precisely synchronized clocks for the information of new bytes.     | Asynchronous transmission have no need of synchronized clocks as parity bit is used in this transmission for information of new bytes.          |
