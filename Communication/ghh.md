@@ -62,3 +62,46 @@ Channel Capacity=2* Bandwidth*propagation Delay
 | In Synchronous transmission, There is no gap present between data.     | In asynchronous transmission, There is present gap between data.          |
 |Efficient use of transmission line is done in synchronous transmission.     | While in asynchronous transmission, transmission line remains empty during gap in character transmission.          |
 | Synchronous transmission needs precisely synchronized clocks for the information of new bytes.     | Asynchronous transmission have no need of synchronized clocks as parity bit is used in this transmission for information of new bytes.          |
+
+```md
+Synchronous Transmission:
+
+In Synchronous Transmission, data is sent in form of blocks or frames. This transmission is
+the full duplex type. Between sender and receiver the synchronization is compulsory. In Synchronous
+transmission, There is no gap present between data. It is more efficient and more reliable than
+asynchronous transmission to transfer the large amount of data.
+
+In Synchronous data transfer, the sending and receiving units are enabled with same clock signal.
+It is possible between two units when each of them knows the behavior of the other. The master
+performs a sequence of instructions for data transfer in a predefined order. All these actions
+are synchronized with the common clock. The master is designed to supply the data at a time when
+the slave is definitely ready for it. Usually, the master will introduce sufficient delay to take
+into account the slow response of the slave, without any request from the slave. 
+
+The master does not expect any acknowledgment signal from the slave when data is sent by the master
+to the slave. Similarly, when data from the slave is read by the master, neither the slave informs 
+that the data has been placed on the data bus nor the master acknowledges that the data has been read.
+Both the master and slave perform their own task of transferring data at a designed clock period. Since
+both devices know the behavior (response time) of each other, no difficulty arises. 
+Prior to transferring data, the master must logically select the slave either by sending slave’s address
+or sending “device select” signal to the slave. But there is no acknowledgment signal from the slave to
+the master if the device is selected. 
+```
+![image](https://user-images.githubusercontent.com/51910127/147337643-a4c933ba-edba-475f-aebe-aea88f5c16ca.png)
+
+```md
+in this timing diagram, the master first places slave’s address in the address bus and read signal in the control
+line at the falling edge of the clock. The entire read operation is over in one clock period. 
+
+Advantages –  
+
+The design procedure is easy. The master does not wait for any acknowledges signal from the slave,
+though the master waits for a time equal to slave’s response time.
+The slave does not generate an acknowledge signal, though it obeys the timing rules as per
+the protocol set by the master or system designer. 
+ 
+Disadvantages –  
+
+If a slow speed unit connected to a common bus, it can degrade the overall rate of transfer in the system.
+If the slave operates at a slow speed, the master will be idle for some time during data transfer and vice versa. 
+```
