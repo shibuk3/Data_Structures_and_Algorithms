@@ -88,6 +88,7 @@ or sending “device select” signal to the slave. But there is no acknowledgme
 the master if the device is selected. 
 ```
 ![image](https://user-images.githubusercontent.com/51910127/147337643-a4c933ba-edba-475f-aebe-aea88f5c16ca.png)
+![image](https://user-images.githubusercontent.com/51910127/147337837-66690cfa-0cb7-40b3-ab2b-28702b130d1b.png)
 
 ```md
 in this timing diagram, the master first places slave’s address in the address bus and read signal in the control
@@ -105,3 +106,28 @@ Disadvantages –
 If a slow speed unit connected to a common bus, it can degrade the overall rate of transfer in the system.
 If the slave operates at a slow speed, the master will be idle for some time during data transfer and vice versa. 
 ```
+### Aynsconus
+
+![image](https://user-images.githubusercontent.com/51910127/147337953-8fdc6b57-e886-4201-beb1-48e7b6a4cfe1.png)
+
+```md
+In Asynchronous Transmission, data is sent in form of byte or character. This transmission
+is the half duplex type transmission. In this transmission start bits and stop bits are added 
+with data. It does not require synchronization.
+```
+```md
+In most computer asynchronous mode of data transfer is used in which two component have a different clock.
+Data transfer can occur between data in two ways serial and parallel. In case of parallel multiple lines 
+are used to send a single bit whereas in serial transfer each bit is send one at a time. To tell other devices 
+when the character/data will be given a concept of start and end bit is used. A start bit is denoted by 0 and 
+stop bit is detected when line return to 1-state at least one time, here 1-state means that there is not data 
+transfer is occurring.
+
+When a character is not being sent then line is kept in state 1. Start of character is detected when a 0 is sent.
+The character bit always come after 0 bit. After last bit is sent the state of line to become 1.
+
+
+
+The diagram below shows this concept:
+```
+![image](https://user-images.githubusercontent.com/51910127/147338040-a8572060-4372-4fa0-be5c-ed8ae0ff0477.png)
