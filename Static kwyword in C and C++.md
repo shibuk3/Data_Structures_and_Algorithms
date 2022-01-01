@@ -559,4 +559,8 @@ A's constructor called
 - similiarly we can also do for function as function in c++/c are global and can be acessed from anywhere in the program 
 and other file also, so to make it private to taht file we can make it static function
 - constructor and desctructor can never be static and they dio not have return type
-- 
+- static member function in a class can only acces static member(data/variable/function) of a class 
+- when an object is created , two types of constructor is created implicitly
+1. copy constructor- if this cosntructor is created by user explicitly, compiler will not create any type of constructor(nor copy neither default)
+2. default constructor(non parameterzied)- this is creted by compiler. if this is created by user , only copy constructor will be ccreated
+- parameterized constructor is created by user explicitly , and if this is created compiler will not create default constructor and willc create only copy constructor
