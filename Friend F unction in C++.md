@@ -11,3 +11,4 @@
 - friend fucntion can become friend to more than one class
 - it doesnt matter where we declare friend fucntion (private or public)
 - member function of one class acan become friend to another class
+- freind function always need class as parameter on which operation is to performed 
