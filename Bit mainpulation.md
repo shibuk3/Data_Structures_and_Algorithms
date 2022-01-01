@@ -78,7 +78,38 @@ Important Points :
 - The left shift and right shift operators should not be used for negative numbers.
  The result of is undefined behaviour if any of the operands is a negative number.
  For example results of both 1 >> -1 and 1 << -1 is undefined.
--If the number is shifted more than the size of integer, the behaviour is undefined.
+ - If the number is shifted more than the size of integer, the behaviour is undefined.
 For example, 1 << 33 is undefined if integers are stored using 32 bits. For bit shift
 of larger values 1ULL<<62  ULL is used for Unsigned Long Long which is defined using 
 64 bits which can store large values.
+
+```cpp
+#include <iostream>
+using namespace std;
+  
+int main() {
+      // a = 5(00000101), b = 9(00001001)
+    int a = 5, b = 9;
+  
+    // The result is 00000001
+    cout<<"a = " << a <<","<< " b = " << b <<endl;
+    cout << "a & b = " << (a & b) << endl;
+  
+    // The result is 00001101
+    cout << "a | b = " << (a | b) << endl;
+  
+    // The result is 00001100
+    cout << "a ^ b = " << (a ^ b) << endl;
+  
+    // The result is 11111010
+    cout << "~(" << a << ") = " << (~a) << endl;
+  
+    // The result is 00010010
+    cout<<"b << 1" <<" = "<< (b << 1) <<endl;
+  
+    // The result is 00000100
+    cout<<"b >> 1 "<<"= " << (b >> 1 )<<endl;
+  
+    return 0;
+}
+```
