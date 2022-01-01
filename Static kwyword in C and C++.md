@@ -553,3 +553,10 @@ A's constructor called
 - static function of course , can only be declared inside sturctures in C and should be defined outside structures
 - static function can be defined inside sturctures in C++
 - static variable can only be declared and must be defined outside structures/class in C/C++
+- global varible can be accessed anywhere from the program in a file and also from another file
+- to limit the scope of global variable to a specific file , we can declare it static to limit
+ the scope to that file only
+- similiarly we can also do for function as function in c++/c are global and can be acessed from anywhere in the program 
+and other file also, so to make it private to taht file we can make it static function
+- constructor and desctructor can never be static and they dio not have return type
+- 
