@@ -9,4 +9,5 @@
 - it has no caller object
 - while defining otside the  calss , we dont need membership label and also the friend keyword
 - friend fucntion can become friend to more than one class
-- i doesnt matter where we declare friend fucntion (private or public)
+- it doesnt matter where we declare friend fucntion (private or public)
+- member function of one class acan become friend to another class
