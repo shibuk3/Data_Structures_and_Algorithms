@@ -545,3 +545,11 @@ int main()
 Output: 
 A's constructor called
 ```
+
+### __Some facts__
+
+- function can only be declared inside sturctures in C and should be defined outside structures
+- function can be defined inside sturctures in C++
+- static function of course , can only be declared inside sturctures in C and should be defined outside structures
+- static function can be defined inside sturctures in C++
+- static variable can only be declared and must be defined outside structures/class in C/C++
