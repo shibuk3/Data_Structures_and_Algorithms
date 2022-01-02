@@ -82,6 +82,8 @@ Important Points :
 For example, 1 << 33 is undefined if integers are stored using 32 bits. For bit shift
 of larger values 1ULL<<62  ULL is used for Unsigned Long Long which is defined using 
 64 bits which can store large values.
+- The & operator can be used to quickly check if a number is odd or even. The value of expression
+ (x & 1) would be non-zero only if x is odd, otherwise the value would be zero. 
 
 ```cpp
 #include <iostream>
@@ -113,3 +115,35 @@ int main() {
     return 0;
 }
 ```
+- Question 1
+```md
+Given a set of numbers where all elements occur even a number of times except one number, find the odd occurring number
+```
+
+```cpp
+#include <iostream>
+using namespace std;
+  
+// Function to return the only odd
+// occurring element
+int findOdd(int arr[], int n)
+{
+    int res = 0, i;
+    for (i = 0; i < n; i++)
+        res ^= arr[i];
+    return res;
+}
+  
+// Driver Method
+int main(void)
+{
+    int arr[] = { 12, 12, 14, 90, 14, 14, 14 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "The odd occurring element is  "<< findOdd(arr, n);
+    return 0;
+}
+
+Output: 
+The odd occurring element is 90
+```
+Link 1 : https://www.geeksforgeeks.org/calculate-xor-1-n/
