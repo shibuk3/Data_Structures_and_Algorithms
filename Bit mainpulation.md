@@ -185,4 +185,7 @@ is not a power of 2, then print error message and exit.
 
 Question 7: swap two numbers without using a temporary variable
 https://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/?ref=lbp
+
+Question 8: Extract ith to jtj bit from a number
+link: https://www.geeksforgeeks.org/extract-k-bits-given-position-number/
 ```
