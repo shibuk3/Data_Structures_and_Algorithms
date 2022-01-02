@@ -173,4 +173,13 @@ Link 3: https://www.youtube.com/watch?v=Ztt-VtNyqL8
 
 Question 4: Right most set bit Mask
 link4 : https://www.youtube.com/watch?v=XcSr6TIMl7w
+
+Question 5: check the kth bit is set or not ?
+Link : https://www.geeksforgeeks.org/check-whether-k-th-bit-set-not/?ref=lbp
+
+Question 6: Find position of the only set bit
+
+f number is power of two then and then only its binary representation contains only one ‘1’. 
+That’s why check whether the given number is a power of 2 or not. If given number
+is not a power of 2, then print error message and exit.
 ```
