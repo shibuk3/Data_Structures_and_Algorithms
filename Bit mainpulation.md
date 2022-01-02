@@ -182,4 +182,7 @@ Question 6: Find position of the only set bit
 f number is power of two then and then only its binary representation contains only one ‘1’. 
 That’s why check whether the given number is a power of 2 or not. If given number
 is not a power of 2, then print error message and exit.
+
+Question 7: swap two numbers without using a temporary variable
+https://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/?ref=lbp
 ```
