@@ -147,6 +147,7 @@ Output:
 The odd occurring element is 90
 ```
 Link 1 : https://www.geeksforgeeks.org/calculate-xor-1-n/
+
 Link 2 : https://www.geeksforgeeks.org/program-to-find-whether-a-given-number-is-power-of-2/
 ```md
 Concept 1:-
@@ -166,4 +167,10 @@ We can say n is a power of 2 or not based on the value of n&(n-1).
 The expression n&(n-1) will not work when n is 0. To handle this case
 also, our expression will become n& (!n&(n-1))
 ```
-Link 3:
+```md
+Question 3: find the rightmost set bit efficiently
+Link 3: https://www.youtube.com/watch?v=Ztt-VtNyqL8
+
+Question 4: Right most set bit Mask
+link4 : https://www.youtube.com/watch?v=XcSr6TIMl7w
+```
