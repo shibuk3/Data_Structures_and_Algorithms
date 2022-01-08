@@ -29,3 +29,56 @@ Constraints:
 1 <= words[i].length <= 50
 s and words[i] consist of only lowercase English letters.
 ```
+
+My solution : TLE , alyhough logic is correct 42/52 cases passed
+```cpp
+bool search(vector<int> &temp ,int& prev)
+{  int ans=INT_MIN;
+    int high= temp.size()-1;
+    int low=0;
+    while(low<=high)
+    {
+      int mid=(high+low)/2;
+        
+       
+        if(temp[mid]>prev)
+        { ans=temp[mid]; high=mid-1;}
+        else 
+            low =mid+1;
+        
+        
+    }
+ 
+  if(ans==INT_MIN) return false;
+   else 
+   {prev=ans;return true;}
+    
+}
+bool find(string &x, vector<vector<int>>&u)
+{ int  prev=-1;
+   for(int i=0;i<x.length();i++){
+    vector<int> temp= u[x[i]-'a'];
+     if(!search(temp, prev))
+         return false;
+    
+    
+   }
+    return true;
+}
+
+class Solution {
+public:
+    int numMatchingSubseq(string &s, vector<string>& words) {
+    //  unordered_map<char, vector<int>>u;
+        vector<vector<int>> v(26);
+        
+        for(int i=0;i<s.length();i++) v[s[i]-'a'].push_back(i);
+        int ans=0; int prev=-1;
+        for(int i=0;i<words.size();i++)
+        {  
+            if(find(words[i],v)) ans++;
+        }
+        return ans;
+    }
+};
+```
