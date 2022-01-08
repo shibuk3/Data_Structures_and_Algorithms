@@ -6,9 +6,11 @@ A string is considered beautiful if it satisfies the following conditions:
 
 Each of the 5 English vowels ('a', 'e', 'i', 'o', 'u') must appear at least once in it.
 The letters must be sorted in alphabetical order (i.e. all 'a's before 'e's, all 'e's before 'i's, etc.).
-For example, strings "aeiou" and "aaaaaaeiiiioou" are considered beautiful, but "uaeio", "aeoiu", and "aaaeeeooo" are not beautiful.
+For example, strings "aeiou" and "aaaaaaeiiiioou" are considered beautiful, but "uaeio", "aeoiu", and 
+"aaaeeeooo" are not beautiful.
 
-Given a string word consisting of English vowels, return the length of the longest beautiful substring of word. If no such substring exists, return 0.
+Given a string word consisting of English vowels, return the length of the longest beautiful substring
+of word. If no such substring exists, return 0.
 
 A substring is a contiguous sequence of characters in a string.
 
@@ -38,7 +40,8 @@ word consists of characters 'a', 'e', 'i', 'o', and 'u'.
 ```
 
 
-he basic idea is 'a' < 'e' < 'i' < 'o' < 'u'. So this problem is to find the length of the longest non-decreasing substring that has five different chars.
+the basic idea is 'a' < 'e' < 'i' < 'o' < 'u'. So this problem is to find the length of the longest
+non-decreasing substring that has five different chars.
 ```cpp
 class Solution {
 public:
