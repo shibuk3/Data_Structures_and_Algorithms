@@ -9,3 +9,6 @@
 ### __Count palindromic subsequeunce__
 - [YT Link](https://www.youtube.com/watch?v=YHSjvswCXC8)
 
+- longest palindromic subsequnce
+- count distinct palindromic sunseuqnce
+- count distinct palindrmic substring
