@@ -150,3 +150,4 @@ Important Notes-
 - There exists only one PCB corresponding to each process.
 - PCB of all the processes are present in a linked list.
 ```
+- [LINK PHYSICAL AND LOGICAL ADRESS SPACE](https://www.javatpoint.com/os-physical-and-logical-address-space)
