@@ -1,3 +1,8 @@
+t
+
+https://www.geeksforgeeks.org/translation-lookaside-buffer-tlb-in-paging/
+
+
 ranslation Lookaside Buffer (TLB) in Paging
 Difficulty Level : Easy
 Last Updated : 30 Oct, 2020
