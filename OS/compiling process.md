@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/51910127/152515937-9c325745-e935-4a2c-9542-aad77f4c8a57.png)
+
+
 ```User writes a program in C language (high-level language). The C compiler, compiles
 the program and translates it to assembly program (low-level language). An assembler 
 then translates the assembly program into machine code (object). A linker tool is 
@@ -150,3 +153,5 @@ In brief, static and dynamic linking are two linking mechanisms. The main differ
 between static and dynamic linking is that static linking copies all library modules
 used in the program into the final executable file at the final step of the compilation 
 while in dynamic linking, the linking occurs at run time when both executable files and libraries are placed in the memory.
+
+[link](https://www.efaculty.in/c-language/structure-of-c-program-writing-and-executing-the-first-c-program/)
