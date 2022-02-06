@@ -1,5 +1,8 @@
 [link](https://www.freecodecamp.org/news/what-is-endianness-big-endian-vs-little-endian/)
 
+### __write a program to know the endianness of a machine__
+
+
 ### __Memory Alignment__
 
 ```
