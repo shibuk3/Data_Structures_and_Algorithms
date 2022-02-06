@@ -2,6 +2,93 @@
 
 ### __write a program to know the endianness of a machine__
 
+Little and Big Endian Mystery
+
+Little and big endian are two ways of storing multibyte data-types ( int, float, etc).
+In little endian machines, last byte of binary representation of the multibyte 
+data-type is stored first. On the other hand, in big endian machines, 
+first byte of binary representation of the multibyte data-type is stored first. 
+Suppose integer is stored as 4 bytes (For those who are using DOS-based compilers
+such as C++ 3.0, integer is 2 bytes) then a variable x with value 0x01234567 will
+be stored as following.
+
+![image](https://user-images.githubusercontent.com/51910127/152698910-ec8c40a1-9f43-4e9b-980a-7b7424d20b80.png)
+
+How to see memory representation of multibyte data types on your machine? 
+
+Here is a sample C code that shows the byte representation of int, float and pointer. 
+```c
+#include <stdio.h>
+  
+/* function to show bytes in memory, from location start to start+n*/
+void show_mem_rep(char *start, int n) 
+{
+    int i;
+    for (i = 0; i < n; i++)
+         printf(" %.2x", start[i]);
+    printf("\n");
+}
+  
+/*Main function to call above function for 0x01234567*/
+int main()
+{
+   int i = 0x01234567;
+   show_mem_rep((char *)&i, sizeof(i));
+   getchar();
+   return 0;
+}
+```
+
+
+When above program is run on little endian machine, gives “67 45 23 01” as output, 
+while if it is run on big endian machine, gives “01 23 45 67” as output.
+
+Is there a quick way to determine endianness of your machine? 
+There are n no. of ways for determining endianness of your machine. Here is one quick way of doing the same. 
+
+```c
+#include <stdio.h>
+int main() 
+{
+   unsigned int i = 1;
+   char *c = (char*)&i;
+   if (*c)    
+       printf("Little endian");
+   else
+       printf("Big endian");
+   getchar();
+   return 0;
+}
+```
+In the above program, a character pointer c is pointing to an integer i. Since size of character 
+is 1 byte when the character pointer is de-referenced it will contain only first byte of integer. 
+If machine is little endian then *c will be 1 (because last byte is stored first)
+and if the machine is big endian then *c will be 0. 
+
+Does endianness matter for programmers? 
+
+Most of the times compiler takes care of endianness, however, endianness becomes
+an issue in following cases.
+It matters in network programming: Suppose you write integers to file on a little 
+endian machine and you transfer this file to a big-endian machine. Unless there is
+little endian to big endian transformation, big endian machine will read the
+file in reverse order. You can find such a practical example here.
+Standard byte order for networks is big endian, also known as network byte order.
+Before transferring data on network, data is first converted to network byte order (big endian).
+
+__What are bi-endians?__ 
+
+Bi-endian processors can run in both modes little and big endian.
+What are the examples of little, big endian and bi-endian machines ? 
+Intel based processors are little endians. ARM processors were little endians.
+Current generation ARM processors are bi-endian.
+Motorola 68K processors are big endians. PowerPC (by Motorola) and SPARK (by Sun)
+processors were big endian. Current version of these processors are bi-endians. 
+Does endianness affects file formats? 
+File formats which have 1 byte as a basic unit are independent of endianness e.g.,
+ASCII files. Other file formats use some fixed endianness format e.g, JPEG files
+are stored in big endian format. 
+
 
 ### __Memory Alignment__
 
