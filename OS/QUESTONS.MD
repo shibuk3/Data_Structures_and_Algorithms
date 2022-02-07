@@ -50,3 +50,9 @@ cin >> input;
 -   Memory related functions like malloc,calloc.
 -   how C program is stored in memory and why cant we access local variables from other blocks(relating to how they are stored in memory)
 -   What's the difference between pointer and reference?
+- https://www.geeksforgeeks.org/functions-that-are-executed-before-and-after-main-in-c/?ref=lbp
+- https://www.geeksforgeeks.org/variable-length-argument-c/?ref=rp
+- https://www.geeksforgeeks.org/return-0-vs-return-1-in-c/?ref=rp
+- https://www.geeksforgeeks.org/pass-2d-array-parameter-c/
+- https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/?ref=lbp
+- https://www.geeksforgeeks.org/enumeration-enum-c/?ref=leftbar-rightbar
