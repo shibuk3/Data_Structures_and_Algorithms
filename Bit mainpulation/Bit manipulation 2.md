@@ -3,4 +3,5 @@
 - [Count set bit in a number]
 - [count all set bit in numbers from 1 to n]
 - [reverse bits of a number using lookup table or constant time]
-- [add two numbers without using arithmetic operators]
+- [add two numbers without using arithmetic operators](https://www.geeksforgeeks.org/add-two-numbers-without-using-arithmetic-operators/?ref=leftbar-rightbar)
+- [subtract two numbers without using arithmetic operators](https://www.geeksforgeeks.org/subtract-two-numbers-without-using-arithmetic-operators/?ref=rp)
