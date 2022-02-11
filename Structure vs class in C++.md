@@ -165,3 +165,14 @@ Why actually an empty class in C++ takes one byte?
 Simply a class without an object requires no space allocated to it. The space is allocated when the class is instantiated, so 1 byte is allocated by the compiler to an object of an empty class for its unique address identification. 
 
 If a class has multiple objects they can have different unique memory locations. Suppose, if a class does not have any size, what would be stored on the memory location? That’s the reason when we create an object of an empty class in a C++ program, it needs some memory to get stored, and the minimum amount of memory that can be reserved is 1 byte. Hence, if we create multiple objects of an empty class, every object will have a unique address.
+
+
+```md
+Objects Memory Allocation in C++
+The way memory is allocated to variables and functions of the class is different even though they both are from the same class.
+
+The memory is only allocated to the variables of the class when the object is created. The memory is not allocated to the variables when the class is declared. At the same time, single variables can have different values for different objects, so every object has an individual copy of all the variables of the class. But the memory is allocated to the function only once when the class is declared. So the objects don’t have individual copies of functions only one copy is shared among each object.
+
+
+
+```
