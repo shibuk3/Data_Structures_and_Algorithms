@@ -552,7 +552,8 @@ A's constructor called
 - function can be defined inside sturctures in C++
 - static function of course , can only be declared inside sturctures in C and should be defined outside structures
 - static function can be defined inside sturctures in C++
-- static variable can only be declared and must be defined outside structures/class in C/C++
+- static variable can only be declared and must be defined outside structures/class in C++
+- static vriable cannot be decared inside structures in C.so also cannot be defined inside structures in C. 
 - global varible can be accessed anywhere from the program in a file and also from another file
 - to limit the scope of global variable to a specific file , we can declare it static to limit
  the scope to that file only
