@@ -4,6 +4,7 @@ In C++, a structure is the same as a class except for a few differences. The mos
 A Structure is not secure and cannot hide its implementation details from the end-user while a class is secure and
 can hide its programming and designing details. Following are some differences between a class and a structure.
 | C ++       | C     |
+|----------|---------|
 | Members of a class are private by default.| Members of a structure are public by default. |
 |   The class variables may have null values.       |   There can be no null values in any structure member.      |
 |    It is a reference type data type.      |   It is a value type data type.      |
