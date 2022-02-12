@@ -5,6 +5,7 @@
 - https://www.geeksforgeeks.org/understanding-volatile-qualifier-c-set-1-introduction/?ref=rp
 - https://www.geeksforgeeks.org/enumeration-enum-c/?ref=leftbar-rightbar
 - https://www.javatpoint.com/typedef-in-c
+- https://www.geeksforgeeks.org/function-pointer-in-c/
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
