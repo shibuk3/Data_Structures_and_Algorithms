@@ -35,7 +35,7 @@ int main()
 ```
 - https://www.geeksforgeeks.org/pass-2d-array-parameter-c/?ref=lbp
 ```cpp
-If compiler is not C99 compatible, then we can use one of the following methods to pass a variable sized 2D array.
+If compiler is not C99 compatible, then we can use following method to pass a variable sized 2D array.
 4) Using a single pointer 
 In this method, we must typecast the 2D array when passing to function.
 #include <stdio.h>
