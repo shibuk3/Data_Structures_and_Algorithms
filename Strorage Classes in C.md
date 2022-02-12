@@ -1,2 +1,35 @@
+- https://www.geeksforgeeks.org/storage-classes-in-c/
+- https://www.geeksforgeeks.org/storage-classes-in-c-with-examples/
 
-https://www.codingninjas.com/codestudio/interview-experiences/texas-instruments-interview-experience-by-anil-raj-on-campus-apr-2021-916
+- https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/?ref=lbp
+```cpp
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int r = 3, c = 4, i, j, count;
+
+	int* arr[r];
+	for (i = 0; i < r; i++)
+		arr[i] = malloc(c * sizeof(int));
+
+	// Note that arr[i][j] is same as *(*(arr+i)+j)
+	count = 0;
+	for (i = 0; i < r; i++)
+		for (j = 0; j < c; j++)
+			arr[i][j] = ++count; // Or *(*(arr+i)+j) = ++count
+
+	for (i = 0; i < r; i++)
+		for (j = 0; j < c; j++)
+			printf("%d ", arr[i][j]);
+
+	/* Code for further processing and free the
+	dynamically allocated memory */
+
+	for (int i = 0; i < r; i++)
+		free(arr[i]);
+
+	return 0;
+}
+```
