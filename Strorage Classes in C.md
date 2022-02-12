@@ -1,6 +1,6 @@
 - https://www.geeksforgeeks.org/storage-classes-in-c/
 - https://www.geeksforgeeks.org/storage-classes-in-c-with-examples/
--https://www.geeksforgeeks.org/memory-layout-of-c-program/?ref=lbp
+- https://www.geeksforgeeks.org/memory-layout-of-c-program/?ref=lbp
 - https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/?ref=lbp
 ```cpp
 #include <stdio.h>
