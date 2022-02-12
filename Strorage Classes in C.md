@@ -3,6 +3,8 @@
 - https://www.geeksforgeeks.org/memory-layout-of-c-program/?ref=lbp
 - https://www.geeksforgeeks.org/dynamically-allocate-2d-array-c/?ref=lbp
 - https://www.geeksforgeeks.org/understanding-volatile-qualifier-c-set-1-introduction/?ref=rp
+- https://www.geeksforgeeks.org/enumeration-enum-c/?ref=leftbar-rightbar
+- https://www.javatpoint.com/typedef-in-c
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
