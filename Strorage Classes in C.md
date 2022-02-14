@@ -7,6 +7,7 @@
 - https://www.javatpoint.com/typedef-in-c
 - https://www.geeksforgeeks.org/function-pointer-in-c/
 - geeksforgeeks.org/difference-between-dispatcher-and-scheduler/?ref=lbp
+- https://www.geeksforgeeks.org/merge-sort/
 ```cpp
 #include <stdio.h>
 #include <stdlib.h>
