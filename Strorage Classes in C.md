@@ -16,6 +16,7 @@
 - [pointer arithmetic](https://aticleworld.com/pointer-arithmetic/)
 - [what is priority inversion](https://www.geeksforgeeks.org/priority-inversion-what-the-heck/)
 - [How to solve priority inversion](https://www.geeksforgeeks.org/difference-between-priority-inversion-and-priority-inheritance/)
+- https://www.geeksforgeeks.org/union-c/
 ```cpp
 
 #include <stdio.h>
