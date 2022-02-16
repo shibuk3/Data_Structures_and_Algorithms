@@ -8,7 +8,14 @@
 - https://www.geeksforgeeks.org/function-pointer-in-c/
 - geeksforgeeks.org/difference-between-dispatcher-and-scheduler/?ref=lbp
 - https://www.geeksforgeeks.org/merge-sort/
+- https://www.geeksforgeeks.org/difference-between-sram-and-dram/
+- https://www.geeksforgeeks.org/write-memcpy/?ref=lbp
+- https://aticleworld.com/how-to-use-atoi-and-how-to-make-own-atoi/
+- implent iota
+- https://www.quora.com/Why-is-cache-memory-faster-than-RAM
+- [pointer arithmetic](https://aticleworld.com/pointer-arithmetic/)
 ```cpp
+
 #include <stdio.h>
 #include <stdlib.h>
 
