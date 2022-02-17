@@ -550,6 +550,7 @@ A's constructor called
 
 - function can only be declared inside sturctures in C and should be defined outside structures
 - function can be defined inside sturctures in C++
+- A static member function can only access static data member, other static member functions and any other functions from outside the class.
 - static function of course , can only be declared inside sturctures in C and should be defined outside structures
 - static function can be defined inside sturctures in C++
 - static variable can only be declared and must be defined outside structures/class in C++
