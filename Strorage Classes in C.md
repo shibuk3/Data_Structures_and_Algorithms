@@ -18,6 +18,7 @@
 - [How to solve priority inversion](https://www.geeksforgeeks.org/difference-between-priority-inversion-and-priority-inheritance/)
 - https://www.geeksforgeeks.org/union-c/
 - https://pencilprogrammer.com/cpp-tutorials/call-by-value-reference-address/
+- https://www.geeksforgeeks.org/pointers-vs-references-cpp/
 ```cpp
 
 #include <stdio.h>
