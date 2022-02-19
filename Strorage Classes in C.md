@@ -19,6 +19,7 @@
 - https://www.geeksforgeeks.org/union-c/
 - https://pencilprogrammer.com/cpp-tutorials/call-by-value-reference-address/
 - https://www.geeksforgeeks.org/pointers-vs-references-cpp/
+- https://www.tutorialspoint.com/difference-between-process-and-thread
 ```cpp
 
 #include <stdio.h>
