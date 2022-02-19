@@ -22,6 +22,7 @@ i + 1) th station. You begin the journey with an empty tank at one of
 ### __HARD___
 - [Given a number in words, print the number](https://www.geeksforgeeks.org/convert-number-to-words/)
 - [given a number, convert into words](https://www.geeksforgeeks.org/program-to-print-the-given-digit-in-words/)
+- https://www.geeksforgeeks.org/rearrange-characters-string-no-two-adjacent/?ref=lbp
 ### __DP__
 - [Assembly Line Scheduling](https://www.geeksforgeeks.org/assembly-line-scheduling-dp-34/)
 
