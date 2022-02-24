@@ -1,3 +1,7 @@
+- https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
+- https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
+
+- https://www.javatpoint.com/what-is-interrupt-in-os
 - https://www.geeksforgeeks.org/storage-classes-in-c/
 - https://www.geeksforgeeks.org/storage-classes-in-c-with-examples/
 - https://www.geeksforgeeks.org/memory-layout-of-c-program/?ref=lbp
