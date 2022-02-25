@@ -3,3 +3,4 @@
 - https://www.geeksforgeeks.org/storage-for-strings-in-c/ 
 -----------------------
 - https://www.geeksforgeeks.org/c-pointers-question-1/?ref=rp
+- https://www.geeksforgeeks.org/c-pointers-question-13/
