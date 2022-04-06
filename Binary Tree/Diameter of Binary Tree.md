@@ -63,24 +63,9 @@ public:
     }
 };
 ```
-```
+
  
-// UTILITY FUNCTIONS TO TEST diameter() FUNCTION
- 
-// The function Compute the "height" of a tree. Height is
-// the number f nodes along the longest path from the root
-// node down to the farthest leaf node.
-int height(struct node* node)
-{
-    // base case tree is empty
-    if (node == NULL)
-        return 0;
- 
-    // If tree is not empty then height = 1 + max of left
-    // height and right heights
-    return 1 + max(height(node->left), height(node->right));
-}
-```
+
 
 - 2nd Solution: TC=O(n)
 
