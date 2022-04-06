@@ -33,6 +33,37 @@ int diameter(struct node* tree)
     return max(lheight + rheight + 1,
             max(ldiameter, rdiameter));
 }
+
+### third solution easy to grab
+
+```cpp
+int find(TreeNode* root, int* ans)
+{
+    if(!root) return  0;
+    
+    
+    
+    int l= find(root->left,ans);
+    int r= find(root->right,ans);
+    
+    *ans=max(*ans,l+r+1);
+    return max(l,r)+1;
+    
+    
+    
+}
+class Solution {
+public:
+    
+    int diameterOfBinaryTree(TreeNode* root) {
+        int x=0;
+         find(root,&x);
+            
+           return x;
+    }
+};
+
+```
  
 // UTILITY FUNCTIONS TO TEST diameter() FUNCTION
  
