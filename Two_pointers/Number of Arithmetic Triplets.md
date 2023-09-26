@@ -63,7 +63,7 @@ If the statement diff > r - l is true, then
 we can assume that the value of r is not large enough and we need to move the right pointer r forward.
 If the statement diff < r - l is true, then the value of r has become larger than necessary and must be reduced by shifting the left pointer l forward.
 Pseudocode:
-
+```
 if diff > nums[r] - nums[l]
     r++
 else if diff < nums[r] - nums[l]
@@ -71,7 +71,7 @@ else if diff < nums[r] - nums[l]
 else 
     // we have found a pair that matches the condition
 Using our pseudocode, check the condition for finding the first pair:
-
+```
 // example
 nums[0,1,4]; diff=3
 l = 0; r = 1
@@ -98,7 +98,7 @@ O(1)O(1)O(1)
 
 Code
 This algorithm can be better, if you know how, then let me know, I'll take it into account with pleasure.
-
+```
 func arithmeticTriplets(nums []int, diff int) int {
   triplets := 0
   i, j, k := 0, 1, 2
@@ -143,7 +143,7 @@ func foundPair(diff int, l, r *int, nums *[]int) bool {
 
   return true
 }
-
+```
 
 
 
