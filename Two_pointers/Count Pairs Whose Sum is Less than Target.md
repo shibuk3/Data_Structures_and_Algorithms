@@ -1,4 +1,4 @@
-# __Count Pairs Whose Sum is Less than Target__
+### __Count Pairs Whose Sum is Less than Target__
 [Problem Link](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/description/) \
 
 Given a 0-indexed integer array nums of length n and an integer target, return the number of pairs (i, j) where 0 <= i < j < n and nums[i] + nums[j] < target.
