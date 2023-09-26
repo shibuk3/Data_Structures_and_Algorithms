@@ -36,6 +36,11 @@ Constraints:
 -50 <= nums[i], target <= 50
 
 ## Solution
+###Intuition
+Problem: You're given an array of integers and a target value. The task is to count the number of pairs of elements in the array such that the sum of the pair is less than the target value.
+The key insight for solving this problem is recognizing that if you have an array sorted in ascending order, you can efficiently find pairs that meet the given condition using a Two-Pointers Approach.
+
+###Approach
 The Two-Pointers Approach is a common technique to solve problems involving arrays or sequences. In this case, you can use two pointers, often referred to as the "left" and "right" pointers, to traverse the array and find pairs that satisfy the given condition.
 
 Here's a high-level overview of the approach:
