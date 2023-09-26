@@ -1,4 +1,4 @@
-###  __Count Pairs Whose Sum is Less than Target__
+# __Count Pairs Whose Sum is Less than Target__
 [Problem Link](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/description/) \
 
 Given a 0-indexed integer array nums of length n and an integer target, return the number of pairs (i, j) where 0 <= i < j < n and nums[i] + nums[j] < target.
@@ -51,7 +51,8 @@ If the sum is greater than or equal to the target, move the right pointer to the
 
 4.) Continue this process until the left pointer crosses the right pointer.
 
-```cpp
+```
+cpp
 class Solution {
 public:
     int countPairs(vector<int>& nums, int target) {
