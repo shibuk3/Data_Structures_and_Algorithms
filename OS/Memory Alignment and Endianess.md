@@ -206,3 +206,70 @@ number of struct variables you can save a considerable amount of memory. Further
 systems have gigabytes of memory. Especially people who work with embedded systems have to
 manage with a very small amount of memory. I will leave the discussion on such 
 applications to a different article.
+
+
+
+```
+// C Program to demonstrate the structure padding property
+#include <stdio.h>
+  
+// Alignment requirements
+// (typical 32 bit machine)
+  
+// char         1 byte
+// short int    2 bytes
+// int          4 bytes
+// double       8 bytes
+  
+// structure A
+typedef struct structa_tag {
+    char c;
+    short int s;
+} structa_t;
+  
+// structure B
+typedef struct structb_tag {
+    short int s;
+    char c;
+    int i;
+} structb_t;
+  
+// structure C
+typedef struct structc_tag {
+    char c;
+    double d;
+    int s;
+} structc_t;
+  
+// structure D
+typedef struct structd_tag {
+    double d;
+    int s;
+    char c;
+} structd_t;
+  
+int main()
+{
+    printf("sizeof(structa_t) = %lu\n", sizeof(structa_t));
+    printf("sizeof(structb_t) = %lu\n", sizeof(structb_t));
+    printf("sizeof(structc_t) = %lu\n", sizeof(structc_t));
+    printf("sizeof(structd_t) = %lu\n", sizeof(structd_t));
+  
+    return 0;
+}
+Output
+sizeof(structa_t) = 4
+sizeof(structb_t) = 8
+sizeof(structc_t) = 24
+sizeof(structd_t) = 16
+```
+
+Structure C – Every structure will also have alignment requirements
+Applying same analysis, structc_t needs sizeof(char) + 7-byte padding + sizeof(double) + sizeof(int) = 1 + 7 + 8 + 4 = 20 bytes. However, the sizeof(structc_t) is 24 bytes. It is because, along with structure members, structure type variables will also have natural alignment. Let us understand it by an example. Say, we declared an array of structc_t as shown below 
+
+structc_t structc_array[3];
+Assume, the base address of structc_array is 0x0000 for easy calculations. If the structc_t occupies 20 (0x14) bytes as we calculated, the second structc_t array element (indexed at 1) will be at 0x0000 + 0x0014 = 0x0014. It is the start address of the index 1 element of the array. The double member of this structc_t will be allocated on 0x0014 + 0x1 + 0x7 = 0x001C (decimal 28) which is not multiple of 8 and conflicts with the alignment requirements of double. As we mentioned at the top, the alignment requirement of double is 8 bytes.
+
+In order to avoid such misalignment, the compiler introduces alignment requirements to every structure. It will be as that of the largest member of the structure. In our case alignment of structa_t is 2, structb_t is 4 and structc_t is 8. If we need nested structures, the size of the largest inner structure will be the alignment of an immediate larger structure.
+
+In structc_t of the above program, there will be a padding of 4 bytes after the int member to make the structure size multiple of its alignment. Thus the size of (structc_t) is 24 bytes. It guarantees correct alignment even in arrays.
