@@ -7,3 +7,7 @@ either constant or non-constant member functions for a non-constant object.
   part of any class)
   
   - https://www.geeksforgeeks.org/const-member-functions-c/
+  - When a function is declared as const, it can be called on any type of object, const object as well as non-const objects.
+  - Whenever an object is declared as const, it needs to be initialized at the time of declaration. however, the object initialization while declaring is possible only with the help of constructors.
+- A function becomes const when the const keyword is used in the function’s declaration. The idea of const functions is not to allow them to modify the object on which they are called.
+- It is recommended practice to make as many functions const as possible so that accidental changes to objects are avoided.
