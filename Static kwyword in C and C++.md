@@ -547,7 +547,7 @@ A's constructor called
 ```
 
 ### __Some facts__
-- a staic varible defined/declared in private cannot be access like class_name.variable or object.variable
+- a staic varible defined/declared in private cannot be access like (class_name.variable <-- WRONG, CORRECT-->class_name::variable or function() even with this syntax we cant call as they are in private) or object.variable
 - function cannot be declared/defined inside sturctures in C.
 - function can be defined inside sturctures in C++
 - A static member function can only access static data member, other static member functions and any other functions from outside the class.
