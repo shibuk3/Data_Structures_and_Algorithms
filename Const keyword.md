@@ -5,3 +5,5 @@ either constant or non-constant member functions for a non-constant object.
   changing any varaible in that function, simply c++ dont allow const keyword with
   non member function (that is function defined in global scope or which is not a
   part of any class)
+  
+  - https://www.geeksforgeeks.org/const-member-functions-c/
