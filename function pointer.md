@@ -1,3 +1,5 @@
+
+-- [quiz on pointers and imp concepts ]https://www.geeksforgeeks.org/c-language-2-gq/pointers-gq/
 ### __Function pointer in C++__
 
 - __Example 1__
