@@ -188,4 +188,6 @@ https://www.geeksforgeeks.org/swap-two-numbers-without-using-temporary-variable/
 
 Question 8: Extract ith to jtj bit from a number
 link: https://www.geeksforgeeks.org/extract-k-bits-given-position-number/
+
+boradcomm interview : https://leetcode.com/discuss/interview-question/1287500/broadcom-interviews-questions-solutions
 ```

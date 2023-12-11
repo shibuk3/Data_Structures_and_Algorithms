@@ -547,14 +547,15 @@ A's constructor called
 ```
 
 ### __Some facts__
-
-- function can only be declared inside sturctures in C and should be defined outside structures
+- a staic varible defined/declared in private cannot be access like (class_name.variable <-- WRONG, CORRECT-->class_name::variable or function() even with this syntax we cant call as they are in private) or object.variable
+- function cannot be declared/defined inside sturctures in C.
 - function can be defined inside sturctures in C++
 - A static member function can only access static data member, other static member functions and any other functions from outside the class.
-- static function of course , can only be declared inside sturctures in C and should be defined outside structures
+- static function of course , cannot be declared/defined inside sturctures in C
 - static function can be defined inside sturctures in C++
 - static variable can only be declared and must be defined outside structures/class in C++
-- static vriable cannot be decared inside structures in C.so also cannot be defined inside structures in C. 
+- static vriable cannot be decared inside structures in C.so also cannot be defined inside structures in C because
+   in C memory is allocaed continoulsy. 
 - global varible can be accessed anywhere from the program in a file and also from another file
 - to limit the scope of global variable to a specific file , we can declare it static to limit
  the scope to that file only

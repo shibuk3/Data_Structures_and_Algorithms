@@ -218,6 +218,151 @@ value of x and y is 85, 64
 In the above example, a single function named func acts differently in three different situations which is the property of polymorphism.
 
 ### __Function overloading and const keyword__
+
+-- __https://www.geeksforgeeks.org/const-member-functions-c/__
+
+```cpp
+
+#include <iostream>
+using namespace std;
+
+class Test {
+protected:
+	int x;
+
+public:
+	Test(int i)
+		: x(i)
+	{
+	}
+	void fun() 
+    {cout << "fun() called " << endl;}	  
+};
+
+int main()
+{
+	Test t1(10);
+	const Test t2(20);
+	t1.fun();
+	t2.fun();
+	return 0;
+}
+
+output:
+./Solution.cpp: In function 'int main()':
+./Solution.cpp:23:9: error: passing 'const Test' as 'this' argument discards qualifiers [-fpermissive]
+  t2.fun();
+         ^
+./Solution.cpp:13:7: note:   in call to 'void Test::fun()'
+  void fun() 
+       ^
+
+```
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Test {
+protected:
+	int x;
+
+public:
+	Test(int i)
+		: x(i)
+	{
+	}
+	void fun() const
+  {cout << "fun() const called " << endl;}
+  
+};
+
+int main()
+{
+	Test t1(10);
+	const Test t2(20);
+	t1.fun();
+	t2.fun();
+	return 0;
+}
+
+output :
+fun() const called 
+fun() const called
+```
+```cpp
+#include <iostream>
+using namespace std;
+
+class Test {
+protected:
+	int x;
+
+public:
+	Test(int i)
+		: x(i)
+	{
+	}
+	void fun() const
+  {cout << "fun() const called " << endl;}
+  void fun()
+{ cout << "fun() called " << endl; }
+};
+
+int main()
+{
+	Test t1(10);
+	const Test t2(20);
+	t1.fun();
+	t2.fun();
+	return 0;
+}
+ouput:
+fun() called 
+fun() const called 
+
+
+```
+```cpp
+#include <iostream>
+using namespace std;
+
+class Test {
+protected:
+	int x;
+
+public:
+	Test(int i)
+		: x(i)
+	{
+	}
+	void fun() 
+  {cout << "fun() const called " << endl;}
+ 
+};
+
+int main()
+{
+
+	const Test t1(20);
+	t1.fun();
+	
+	return 0;
+}
+output:
+./Solution.cpp: In function 'int main()':
+./Solution.cpp:22:9: error: passing 'const Test' as 'this' argument discards qualifiers [-fpermissive]
+  t1.fun();
+         ^
+./Solution.cpp:13:7: note:   in call to 'void Test::fun()'
+  void fun() 
+       ^
+
+```
+
+
+
+
 Predict the output of following C++ program.
 ```cpp
 #include<iostream>
@@ -335,6 +480,29 @@ int main()
     fun(i);
     return 0;
 }
+```
+
+```cpp
+#include<iostream> 
+using namespace std; 
+
+void fun(const int &i) 
+{ 
+	cout << "fun(const int &) called "; 
+} 
+void fun(int &i) 
+{ 
+	cout << "fun(int &) called " ; 
+} 
+int main() 
+{ 
+	int i = 10; 
+	fun(i); 
+	return 0; 
+} 
+output:
+fun(int &) called 
+
 ```
 ### __Functions that cannot be overloaded in C++__
 In C++, following function declarations cannot be overloaded.
